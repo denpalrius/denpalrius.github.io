@@ -5,12 +5,14 @@
   --bg-light:  #f9f7f1;
   --text-light: #2a2a2a;
   --accent:     #c1a57b;
+  --project-divider:  #e0e0e0;
 }
 
 [data-theme="dark"] {
   --bg-light:  #1a1a1a;
   --text-light: #eaeaea;
   --accent:     #8b7e66;
+  --project-card-bg: #444
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
@@ -168,8 +170,8 @@ h2 {
   }
 }
 
-.project-card {
-  background: #fff;
+#projects .project-card {
+  background: var(--bg-light);
   color: var(--text-light);
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   border-radius: 12px;
@@ -179,36 +181,36 @@ h2 {
   justify-content: space-between;
 }
 
-.project-card h3 {
+#projects .project-card h3 {
   font-size: 1.25rem;
   margin: 0;
 }
 
-.card-desc {
+#projects .card-desc {
   flex-grow: 1;
   margin: 1rem 0;
   line-height: 1.4;
 }
 
-.card-divider {
+#projects .card-divider {
   border: none;
   height: 1px;
-  background: #e0e0e0;
+  background: var(--project-divider);
   margin: 1rem 0;
 }
 
-.project-footer {
+#projects .project-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
 }
 
-.project-link-btn {
+#projects .project-link-btn {
   margin-left: auto;
 }
 
-.project-card .chip {
+#projects .project-card .chip {
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
 }
