@@ -28,15 +28,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ────────────────────────────────────────────────────────────────────────────
-  // 2) FOOTER YEAR AUTO-FILL
+  // Anchor‐link jumps with navbar offset (no smooth scroll)
   // ────────────────────────────────────────────────────────────────────────────
-  const yearEl = document.getElementById("current-year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
-  }
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      const targetId = link.getAttribute('href');
+      if (targetId.length > 1) {
+        const targetEl = document.querySelector(targetId);
+        const navbarH = document.querySelector('.navbar').offsetHeight;
+        if (targetEl) {
+          e.preventDefault();
+          // instant jump to (element top minus navbar height)
+          window.scrollTo({
+            top: targetEl.offsetTop - navbarH
+            // no 'behavior' property => defaults to 'auto'
+          });
+        }
+      }
+    });
+  });
+
 
   // ────────────────────────────────────────────────────────────────────────────
-  // 3) CONTACT FORM SUBMISSION
+  // CONTACT FORM SUBMISSION
   // ────────────────────────────────────────────────────────────────────────────
   const form = document.getElementById("contact-form");
   const modal = document.getElementById("form-success-modal");
@@ -70,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ────────────────────────────────────────────────────────────────────────────
-  // 4) GOOGLE CALENDAR SCHEDULING BUTTON
+  // GOOGLE CALENDAR SCHEDULING BUTTON
   // ────────────────────────────────────────────────────────────────────────────
   document.querySelectorAll(".appointment-btn").forEach((container) => {
     if (window.calendar && calendar.schedulingButton) {
@@ -95,4 +109,12 @@ document.addEventListener("DOMContentLoaded", () => {
       })();
     }
   });
+
+  // ────────────────────────────────────────────────────────────────────────────
+  // FOOTER YEAR AUTO-FILL
+  // ────────────────────────────────────────────────────────────────────────────
+  const yearEl = document.getElementById("current-year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 });
