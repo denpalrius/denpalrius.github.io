@@ -116,7 +116,7 @@ body[data-theme="dark"]  #theme-toggle .icon-sun  { display: inline; }
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
+  width: 64px;
   height: 18px;
   background: none;
   border: none;
@@ -652,6 +652,58 @@ h2 {
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
+  CONTACT FORM: THEMED INPUTS & BUTTON
+─────────────────────────────────────────────────────────────────────────────*/
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  background: var(--card-light);
+  color: var(--text-light);
+  border: 1px solid var(--project-divider);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  transition: 
+    background 0.2s ease, 
+    border-color 0.2s ease, 
+    color 0.2s ease;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: var(--text-light);
+  opacity: 0.6;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* submit button already picks up --accent, but ensure transition */
+#contact-form button {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#contact-form button:hover {
+  background: var(--accent);
+  opacity: 0.9;
+}
+
+#contact-form button:active {
+  transform: scale(0.98);
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
   CONTACT FORM & MODAL
 ─────────────────────────────────────────────────────────────────────────────*/
 form {
@@ -710,6 +762,8 @@ form button {
   cursor: pointer;
   font-weight: 600;
 }
+
+
 /*─────────────────────────────────────────────────────────────────────────────
   APPOINTMENT BUTTON CONTAINER
 ─────────────────────────────────────────────────────────────────────────────*/
