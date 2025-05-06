@@ -17,22 +17,36 @@
   --project-divider:   #444444;
 }
 
+
 /*─────────────────────────────────────────────────────────────────────────────
-  THEME TOGGLE BUTTON
+  THEME TOGGLE BUTTON (styled & visible)
 ─────────────────────────────────────────────────────────────────────────────*/
 #theme-toggle {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  left: 1.5rem;
+  width: 48px;
+  height: 48px;
+  padding: 0;
   background: var(--accent);
-  color: #fff;
+  color: var(--bg-light);
   border: none;
-  padding: 0.5rem;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.25rem;
   cursor: pointer;
-  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  transition: filter 0.2s ease, transform 0.2s ease;
 }
+
+#theme-toggle:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
 
 /*─────────────────────────────────────────────────────────────────────────────
   RESET & BASE
@@ -308,6 +322,55 @@ h2 {
   font-size: 0.9rem;
   padding: 0.3rem 0.8rem;
 }
+
+/*─────────────────────────────────────────────────────────────────────────────
+  EDUCATION SECTION
+─────────────────────────────────────────────────────────────────────────────*/
+.education {
+  margin-top: 1.5rem;    /* tighten from default */
+  margin-bottom: 2rem;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.education-item {
+  background:    var(--card-light);
+  border-left:   4px solid var(--accent);
+  border-radius: 8px;
+  padding:       1rem 1.25rem;
+  box-shadow:    0 2px 6px rgba(0, 0, 0, 0.05);
+  transition:    transform 0.2s, box-shadow 0.2s;
+}
+
+.education-item:hover {
+  transform:     translateY(-3px);
+  box-shadow:    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.education-item h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-light);
+}
+
+.education-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /*─────────────────────────────────────────────────────────────────────────────
   PROJECTS GRID & CARDS
