@@ -1,248 +1,667 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Dennis Muticia | Software Engineering & AI Leadership Portfolio">
-  <meta name="keywords" content="Software Engineer, AI Engineering, Cloud, Microservices, Federated Learning, Quantum Computing">
+  <meta name="keywords"
+    content="Dennis Muticia, Dennis Riungu, Software Engineer, AI Engineering, Cloud, Microservices">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Calendar Appointment Scheduling begin -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
   <title>Dennis Muticia | Portfolio</title>
-  <style>
-    :root { --bg-light: #f9f7f1; --text-light: #2a2a2a; --accent: #c1a57b; }
-    [data-theme="dark"] { --bg-light: #1a1a1a; --text-light: #eaeaea; --accent: #8b7e66; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg-light); color: var(--text-light); line-height: 1.6; scroll-behavior: smooth; padding-top: 70px; }
-    header, section { padding: 4rem 2rem; }
-    nav { position: fixed; top: 0; width: 100%; background: var(--bg-light); display: flex; justify-content: center; flex-wrap: wrap; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 1rem 0; z-index: 100; }
-    nav a { margin: 0 1rem; text-decoration: none; color: var(--text-light); font-weight: 600; }
-    @media (max-width: 600px) { nav a { margin: 0.5rem; font-size: 0.9rem; } }
-    .container { max-width: 1000px; margin: auto; }
-    #landing { display: flex; flex-direction: column; align-items: center; text-align: center; }
-    #landing img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
-    #landing h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    #landing p.subtitle { font-size: 1.2rem; color: var(--accent); margin-bottom: 1rem; }
-    #resume-btn { background: var(--accent); color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; text-decoration: none; font-weight: 600; }
-    section h2 { font-size: 2rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent); display: inline-block; }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    .chip { background: var(--accent); color: #fff; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.9rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .card { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: relative; }
-    .card a { position: absolute; top: 1rem; right: 1rem; font-size: 1.2rem; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 1rem; }
-    .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
-    form { display: flex; flex-direction: column; gap: 1rem; }
-    form input, form textarea { padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; }
-    form button { background: var(--accent); color: #fff; padding: 0.75rem; border: none; border-radius: 8px; font-weight: 600; }
-    #theme-toggle { position: fixed; bottom: 1rem; right: 1rem; background: var(--accent); color: #fff; border: none; padding: 0.5rem; border-radius: 50%; cursor: pointer; }
-  </style>
+
+
+  <!-- <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon.png">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@denpalrius">
+  <meta name="twitter:title" content="Dennis Muticia | Software Engineering & AI Leadership Portfolio">
+  <meta name="twitter:description" content="Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale, cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at orchestrating Agile transformations that elevate team velocity and quality.">
+  <meta name="twitter:image" content="images/profile.jpg">
+  <meta property="og:title" content="Dennis Muticia | Software Engineering & AI Leadership Portfolio">
+  <meta property="og:description" content="Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale, cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at orchestrating Agile transformations that elevate team velocity and quality.">
+  <meta property="og:image" content="images/profile.jpg">
+  <meta property="og:url" content="https://dennismuticia.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dennis Muticia">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="en_GB"> -->
 </head>
+
 <body data-theme="light">
   <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
-  <nav class="container">
+  <nav>
     <a href="#landing">Home</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#research">Research</a>
     <a href="#experience">Experience</a>
     <a href="#blog">Blog</a>
-    <a href="#gallery">Gallery</a>
+    <!-- <a href="#gallery">Gallery</a> -->
     <a href="#contact">Contact</a>
   </nav>
-
-
-  <!-- <header id="landing" class="container">
-    <img src="path/to/profile.jpg" alt="Dennis Muticia">
-    <h1>Dennis Muticia</h1>
-    <p class="subtitle">Senior Software Engineer & Technical Lead</p>
-    <p>Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale, cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at orchestrating Agile transformations that elevate team velocity and quality.</p>
-    <a id="resume-btn" href="Dennis_Muticia_Resume.pdf" download>Download Resume</a>
-  </header> -->
 
 
   <header id="landing" class="container">
     <img src="images/prof-pic.jpg" alt="Dennis Muticia">
     <h1>Dennis Muticia</h1>
     <p class="subtitle">Senior Software Engineer & Technical Lead</p>
-    <p>Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale, cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at orchestrating Agile transformations that elevate team velocity and quality.</p>
+    <p>Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale,
+      cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at
+      orchestrating Agile transformations that elevate team velocity and quality.</p>
     <br>
-    <a id="resume-btn" href="https://docs.google.com/document/d/1vje4uUo0iAIVX078PtjJisdFlYgHvaLjUhY0IVs8XoA/edit?tab=t.0" target="_blank" rel="noopener noreferrer" download>Download Resume</a>
+    <div>
+      <a id="resume-btn"
+        href="https://docs.google.com/document/d/1vje4uUo0iAIVX078PtjJisdFlYgHvaLjUhY0IVs8XoA/edit?tab=t.0"
+        target="_blank" rel="noopener noreferrer" download>Download Resume</a>
+      <!-- <div class="appointment-btn"
+        data-schedule-url="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0AkSBOhd1YaheJTmslpX7mCAKJGihSFUMJbAsjTv4EAkdrtFaaYGRWxI4hpc0pQZMiQOp4ongn?gv=true"
+        data-label="Let’s Chat" data-color="#c1a57b">
+      </div> -->
+    </div>
   </header>
-
-  
-  <!-- <section id="skills" class="container">
-    <h2>Skills</h2>
-    <h3>Software Engineering</h3>
-    <div class="chips">
-      <div class="chip">Python</div><div class="chip">TypeScript</div><div class="chip">Java</div><div class="chip">C#</div><div class="chip">SQL</div><div class="chip">NoSQL</div><div class="chip">Docker</div><div class="chip">Kubernetes</div><div class="chip">AWS</div><div class="chip">GCP</div><div class="chip">Azure</div><div class="chip">Spring Boot</div><div class="chip">NestJS</div>
-    </div>
-    <h3>AI Engineering</h3>
-    <div class="chips">
-      <div class="chip">LLMs</div><div class="chip">RAG</div><div class="chip">SageMaker</div><div class="chip">LangChain</div><div class="chip">PyTorch</div><div class="chip">TensorFlow</div><div class="chip">Computer Vision</div><div class="chip">Qiskit</div>
-    </div>
-    <h3>Leadership</h3>
-    <div class="chips">
-      <div class="chip">Scrum</div><div class="chip">Kanban</div><div class="chip">Coaching</div><div class="chip">Mentorship</div><div class="chip">Event Organizing</div>
-    </div>
-  </section>
-  <section id="projects" class="container">
-    <h2>Projects & Open Source</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Distributed Data Processing Pipeline</h3>
-        <p><em>Jan 2025 – Feb 2025</em></p>
-        <p>Scalable event-driven microservices architecture with React/Next.js front-end, Python/NestJS processing, and real-time updates via FastAPI & NATS JetStream. Deployed with Docker Compose, Kubernetes & Terraform. <a href="https://github.com/denpalrius/data-processing-app" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">React</div><div class="chip">Next.js</div><div class="chip">Python</div><div class="chip">NestJS</div><div class="chip">FastAPI</div><div class="chip">NATS</div><div class="chip">Docker</div><div class="chip">Kubernetes</div><div class="chip">Terraform</div></div>
-      </div>
-      ... (rest of project cards unchanged) ...
-    </div>
-  </section> -->
 
 
   <section id="skills" class="container">
     <h2>Skills</h2>
-    <h3>Software Engineering</h3>
+    <h3 class="padding-top-small">Team & Leadershp</h3>
     <div class="chips">
-      <div class="chip">Python</div><div class="chip">TypeScript</div><div class="chip">Java</div><div class="chip">C#</div><div class="chip">SQL</div><div class="chip">NoSQL</div><div class="chip">Docker</div><div class="chip">Kubernetes</div><div class="chip">AWS</div><div class="chip">GCP</div><div class="chip">Azure</div><div class="chip">Spring Boot</div><div class="chip">NestJS</div>
-    </div>
-    <h3>AI Engineering</h3>
-    <div class="chips">
-      <div class="chip">LLMs</div><div class="chip">RAG</div><div class="chip">SageMaker</div><div class="chip">LangChain</div><div class="chip">PyTorch</div><div class="chip">TensorFlow</div><div class="chip">Computer Vision</div><div class="chip">Qiskit</div>
-    </div>
-    <h3>Leadership</h3>
-    <div class="chips">
-      <div class="chip">Scrum</div><div class="chip">Kanban</div><div class="chip">Coaching</div><div class="chip">Mentorship</div><div class="chip">Event Organizing</div>
-    </div>
-  </section>
-
-
-  <section id="projects" class="container">
-    <h2>Projects & Open Source</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Distributed Data Processing Pipeline</h3>
-        <p><em>Jan 2025 – Feb 2025</em></p>
-        <p>Scalable event-driven microservices architecture with React/Next.js front-end, Python/NestJS processing, and real-time updates via FastAPI & NATS JetStream. Deployed with Docker Compose, Kubernetes & Terraform. <a href="https://github.com/denpalrius/data-processing-app" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">React</div><div class="chip">Next.js</div><div class="chip">Python</div><div class="chip">NestJS</div><div class="chip">FastAPI</div><div class="chip">NATS</div><div class="chip">Docker</div><div class="chip">Kubernetes</div><div class="chip">Terraform</div></div>
-      </div>
-      <div class="card">
-        <h3>AI Skills Classification</h3>
-        <p><em>Sep 2024 – Dec 2024</em></p>
-        <p>Semi-supervised ML for classifying AI-related skills in imbalanced job postings with TF-IDF, Word2Vec & BERT embeddings, achieving 98% accuracy. <a href="https://github.com/denpalrius/ai-ml-job-trends" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">TF-IDF</div><div class="chip">Word2Vec</div><div class="chip">BERT</div><div class="chip">Python</div></div>
-      </div>
-      <div class="card">
-        <h3>Sports Action Recognition</h3>
-        <p><em>Oct 2024 – Dec 2024</em></p>
-        <p>Temporal sequence modeling using LSTM, GRU, 3D-CNN & pre-trained InceptionV3/VGG16 on UCF101 dataset. <a href="https://github.com/denpalrius/sports_action_recognition" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">LSTM</div><div class="chip">GRU</div><div class="chip">3D-CNN</div><div class="chip">TensorFlow</div></div>
-      </div>
-      <div class="card">
-        <h3>Federated Learning BFT</h3>
-        <p><em>Sep 2024 – Dec 2024</em></p>
-        <p>Benchmarking Robust Aggregation strategies (FedAvg, Krum, Trimmed Mean) under Byzantine attacks. <a href="https://github.com/denpalrius/bft-federated-learning" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">FedAvg</div><div class="chip">Krum</div><div class="chip">Trimmed Mean</div><div class="chip">Python</div></div>
-      </div>
-      <div class="card">
-        <h3>Grover’s Algorithm</h3>
-        <p><em>Jun 2024 – Jul 2024</em></p>
-        <p>Implemented Grover’s search on IBM Q using Qiskit, demonstrating quadratic speedup for unstructured search. <a href="https://github.com/denpalrius/grovers-algorithm" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">Qiskit</div><div class="chip">Quantum</div><div class="chip">Python</div></div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section id="research" class="container">
-    <h2>Research & Publications</h2>
-    <div class="chips">
-      <div class="chip">Federated Learning</div>
-      <div class="chip">Quantum Computing</div>
-      <div class="chip">NLP</div>
-      <div class="chip">Computer Vision</div>
-      <div class="chip">Microservices</div>
-      <div class="chip">Cloud Native</div>
       <div class="chip">Agile Leadership</div>
+      <div class="chip">Scrum</div>
+      <div class="chip">Kanban</div>
+      <div class="chip">XP</div>
+      <div class="chip">Cross-Team Collaboration</div>
+      <div class="chip">Coaching (GROW model)</div>
+      <div class="chip">Mentorship</div>
+      <div class="chip">Governance, Risk, and Compliance (GRC)</div>
+      <div class="chip">Budget & Resource Allocation</div>
+      <div class="chip">Conflict Resolution & Decision-Making</div>
+      <div class="chip">Event Organizing</div>
+    </div>
+    <h3 class="padding-top-small">Software Engineering</h3>
+    <div class="chips">
+      <div class="chip">Python</div>
+      <div class="chip">TypeScript</div>
+      <div class="chip">JavaScript</div>
+      <div class="chip">Node.js</div>
+      <div class="chip">NestJS</div>
+      <div class="chip">Java</div>
+      <div class="chip">Spring Boot</div>
+      <div class="chip">C#</div>
+      <div class="chip">.NET</div>
+      <div class="chip">OOP</div>
+      <div class="chip">System design</div>
+      <div class="chip">SQL</div>
+      <div class="chip">NoSQL</div>
+      <div class="chip">VectorDB</div>
+      <div class="chip">Microservices</div>
+      <div class="chip">Docker</div>
+      <div class="chip">Kubernetes</div>
+      <div class="chip">AWS</div>
+      <div class="chip">GCP</div>
+      <div class="chip">Azure</div>
+      <div class="chip">Web App security</div>
+      <div class="chip">Application Performance Monitoring (APM)</div>
+    </div>
+    <h3 class="padding-top-small">AI Engineering</h3>
+    <div class="chips">
+      <div class="chip">PyTorch</div>
+      <div class="chip">TensorFlow</div>
+      <div class="chip">Computer Vision</div>
+      <div class="chip">LangChain</div>
+      <div class="chip">Prompt Engineering</div>
+      <div class="chip">NLP</div>
+      <div class="chip">LLMs</div>
+      <div class="chip">RAG</div>
+      <div class="chip">MLOps</div>
+      <div class="chip">AWS SageMaker</div>
+      <div class="chip">Vertex AI</div>
+      <div class="chip">Federated Learning</div>
     </div>
   </section>
-  
 
-  <section id="experience" class="container">
-    <h2>Work Experience</h2>
+
+  <section id="education" class="container">
+    <h2>Education</h2>
     <ul>
-      <li><strong>Graduate Researcher</strong>, University of South Dakota (MSc AI), Jan 2024 – Apr 2025</li>
-      <li><strong>Senior Software Engineer & Technical Lead</strong>, Dash Solutions Inc (NY, USA), Feb 2022 – Dec 2023
-        <ul>
-          <li>Led Wallet API microservice project on AWS; enhanced security & scalability.</li>
-          <li>Migrated Spring Boot API to Redis cache, improving reliability by 35%.</li>
-          <li>Implemented AWS SQS priority queuing & Datadog monitoring, reducing incidents by 40%.</li>
-        </ul>
-      </li>
-      <li><strong>Senior Software & DevOps Engineer</strong>, Smartmile GmbH (Germany), Apr 2021 – Feb 2022
-        <ul>
-          <li>Built Node.js microservices & React frontends on GCP, cutting latency by 20%.</li>
-          <li>Integrated BigQuery with GDPR-compliant telemetry pipelines.</li>
-        </ul>
-      </li>
-      <li><strong>Tech Lead</strong>, Orteo Payment Systems (Kenya), Oct 2018 – Jan 2021
-        <ul>
-          <li>Architected secure microservices & payment gateway; scaled team from 2 to 7 engineers.</li>
-          <li>Led GRC strategy & external security assessments for banking integrations.</li>
-        </ul>
-      </li>
-      <li><strong>Software Engineer</strong>, eShare Ltd (UK), Jun 2017 – Sep 2018
-        <ul>
-          <li>Introduced SonarQube, raising code quality from B+ to A.</li>
-          <li>Secured Docker & Angular apps; built CI/CD pipelines in Azure DevOps.</li>
-        </ul>
-      </li>
-      <li><strong>Software Engineer</strong>, Virtual City Ltd (Kenya), Jul 2016 – Dec 2016
-        <ul>
-          <li>Automated C#/WPF/SQL ingestion tools, reducing integration time by 85%.</li>
-          <li>Open-sourced Material UI WPF MessageBox with 19k+ NuGet downloads.</li>
-        </ul>
-      </li>
+      <li><strong>MSc in Computer Science (Artificial Intelligence)</strong>, University of South Dakota</li>
+      <li><strong>BSc in Computer Technology</strong>, Jomo Kenyatta University of Agriculture and Technology</li>
     </ul>
   </section>
 
 
-  <!-- <section id="blog" class="container">
-    <h2>Blog</h2>
-    <div class="grid">
-      <article class="card"><h3>Blog Post Title 1</h3><p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a></article>
-      <article class="card"><h3>Blog Post Title 2</h3><p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a></article>
-      <article class="card"><h3>Blog Post Title 3</h3><p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a></article>
+  <section id="projects" class="container">
+    <h2>Projects / Research</h2>
+    <div class="project-grid">
+
+      <!-- Material Message Box -->
+      <div class="project-card">
+        <div>
+          <h3>Material Message Box</h3>
+          <p class="card-desc">
+            WPF MaterialDesign MessageBox with customizable themes, RTL support &amp; clipboard copy functionality.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">C#</div>
+            <div class="chip">WPF</div>
+            <div class="chip">Material UI</div>
+            <div class="chip">NuGet</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a href="https://github.com/denpalrius/Material-Message-Box" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/stars/denpalrius/Material-Message-Box?style=social"
+              alt="GitHub stars" />
+          </a>
+          <a href="https://github.com/denpalrius/Material-Message-Box/network/members" target="_blank"
+            rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/forks/denpalrius/Material-Message-Box?style=social"
+              alt="GitHub forks" />
+          </a>
+          <a href="https://www.nuget.org/packages/MaterialMessageBox/" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/nuget/dt/MaterialMessageBox?label=nuget%20downloads"
+              alt="NuGet downloads" />
+          </a>
+
+          <!-- <a class="github-button" href="https://github.com/denpalrius/Material-Message-Box"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/Material-Message-Box on GitHub">
+          </a>
+          <a class="github-button" href="https://github.com/denpalrius/Material-Message-Box"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star"
+            data-size="large" data-show-count="true" aria-label="Star denpalrius/Material-Message-Box on GitHub">
+            Star
+          </a> -->
+        </div>
+      </div>
+
+      <!-- Distributed Data Pipeline -->
+      <div class="project-card">
+        <div>
+          <h3>Distributed Data Pipeline</h3>
+          <p class="card-desc">
+            Event-driven microservices with React, NestJS, FastAPI &amp; NATS JetStream, deployed via Docker, Kubernetes
+            &amp; Terraform.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">React</div>
+            <div class="chip">NestJS</div>
+            <div class="chip">FastAPI</div>
+            <div class="chip">NATS</div>
+            <div class="chip">Docker</div>
+            <div class="chip">K8s</div>
+            <div class="chip">Terraform</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/data-processing-app"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/data-processing-app on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <!-- AI Skills Classification -->
+      <div class="project-card">
+        <div>
+          <h3>AI Skills Classification</h3>
+          <p class="card-desc">
+            Semi-supervised ML for classifying AI-related skills in imbalanced job postings with TF-IDF, Word2Vec &amp;
+            BERT embeddings, achieving 98% accuracy.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">TF-IDF</div>
+            <div class="chip">Word2Vec</div>
+            <div class="chip">BERT</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/ai-ml-job-trends"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/ai-ml-job-trends on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <!-- Sports Action Recognition -->
+      <div class="project-card">
+        <div>
+          <h3>Sports Action Recognition</h3>
+          <p class="card-desc">
+            Temporal sequence modeling using LSTM, GRU, 3D-CNN &amp; pre-trained InceptionV3/VGG16 on the UCF101
+            dataset.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">LSTM</div>
+            <div class="chip">GRU</div>
+            <div class="chip">3D-CNN</div>
+            <div class="chip">InceptionV3</div>
+            <div class="chip">VGG16</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/sports_action_recognition"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/sports_action_recognition on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <!-- Portfolio Optimisation -->
+      <div class="project-card">
+        <div>
+          <h3>Portfolio Optimisation</h3>
+          <p class="card-desc">
+            Comparative analysis of deep reinforcement learning algorithms (A2C, PPO, SAC, DDPG, TD3) for portfolio
+            optimisation using FinRL and Stable-Baselines3 on historical market data.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">Python</div>
+            <div class="chip">Reinforcement Learning</div>
+            <div class="chip">Portfolio Optimization</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/portfolio-optimisation"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/portfolio-optimisation on GitHub">
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Federated Learning BFT -->
+      <div class="project-card">
+        <div>
+          <h3>Federated Learning BFT</h3>
+          <p class="card-desc">
+            Benchmarking FedAvg, Krum &amp; Trimmed Mean under Byzantine attacks in a Python-based FL simulation.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">Federated Learning</div>
+            <div class="chip">FedAvg</div>
+            <div class="chip">Krum</div>
+            <div class="chip">Trimmed Mean</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/bft-federated-learning"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/bft-federated-learning on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <!-- Grover’s Algorithm -->
+      <div class="project-card">
+        <div>
+          <h3>Grover’s Algorithm</h3>
+          <p class="card-desc">
+            Implemented Grover’s search algorithm on IBM Q using Qiskit, demonstrating quadratic speedup.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">Qiskit</div>
+            <div class="chip">Quantum Computing</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/grovers-algorithm"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/grovers-algorithm on GitHub">
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
+
+
+  <section id="experience" class="container">
+    <h2>Work Experience</h2>
+
+    <div class="timeline">
+
+      <!-- Graduate Researcher -->
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2024 – Present</div>
+        <h3 class="timeline-role">Graduate Researcher (Artificial Intelligence)</h3>
+        <div class="timeline-company">University of South Dakota</div>
+        <div class="chips">
+          <div class="chip">Python</div>
+          <div class="chip">PyTorch</div>
+          <div class="chip">TensorFlow</div>
+          <div class="chip">NLP Research</div>
+          <div class="chip">Computer Vision</div>
+          <div class="chip">Reinforcement Learning</div>
+        </div>
+      </div>
+
+      <!-- Senior Software Engineer & Technical Lead -->
+      <div class="timeline-item">
+        <div class="timeline-date">Feb 2022 – Dec 2023</div>
+        <h3 class="timeline-role">Senior Software Engineer</h3>
+        <div class="timeline-company">Dash Solutions Inc, New York, USA</div>
+        <ul class="timeline-details">
+          <li>Led Wallet API microservice project on AWS; shipped first iteration in two months.</li>
+          <li>Migrated core Spring Boot API to Redis distributed cache on AWS ElasticCache</li>
+          <li>Implemented AWS SQS priority queuing for real-time critical alerts.</li>
+        </ul>
+        <div class="chips">
+          <div class="chip">Java</div>
+          <div class="chip">Spring Boot</div>
+          <div class="chip">AWS SQS</div>
+          <div class="chip">AWS Fargate</div>
+          <div class="chip">AWS Lambda</div>
+          <div class="chip">Redis</div>
+        </div>
+      </div>
+
+      <!-- Senior Software & DevOps Engineer -->
+      <div class="timeline-item">
+        <div class="timeline-date">Apr 2021 – Feb 2022</div>
+        <h3 class="timeline-role">Senior Software &amp; DevOps Engineer</h3>
+        <div class="timeline-company">Smartmile Deutschland GmbH, Nagold, Germany</div>
+        <ul class="timeline-details">
+          <li>Developed Node.js APIs &amp; React.js apps for parcel locker machines across Europe.</li>
+          <li>Trained team on Scrum; established bi-weekly sprint practices.</li>
+          <li>Optimized core APIs—improved latency 20% via load testing.</li>
+        </ul>
+        <div class="chips">
+          <div class="chip">Node.js</div>
+          <div class="chip">React.js</div>
+          <div class="chip">GCP</div>
+          <div class="chip">Google Cloud Run</div>
+          <div class="chip">Scrum</div>
+          <div class="chip">Load Testing</div>
+          <div class="chip">APM</div>
+        </div>
+      </div>
+
+      <!-- Tech Lead -->
+      <div class="timeline-item">
+        <div class="timeline-date">Oct 2018 – Jan 2021</div>
+        <h3 class="timeline-role">Tech Lead</h3>
+        <div class="timeline-company">Orteo Payment Systems Limited, Nairobi, Kenya</div>
+        <ul class="timeline-details">
+          <li>Orchestrated security-first microservice architecture and payment gateway.</li>
+          <li>Scaled from 2 engineers to 7 members across 3 functional teams.</li>
+          <li>Implemented agile across Dev, QA, DevOps &amp; Cybersecurity—90–98% sprint delivery.</li>
+          <li>Spearheaded GRC strategy &amp; secure banking integrations.</li>
+        </ul>
+        <div class="chips">
+          <div class="chip">Microservices</div>
+          <div class="chip">Agile</div>
+          <div class="chip">GRC</div>
+          <div class="chip">Payment Gateway</div>
+        </div>
+      </div>
+
+      <!-- Software Engineer, eShare Ltd -->
+      <div class="timeline-item">
+        <div class="timeline-date">Jun 2017 – Sep 2018</div>
+        <h3 class="timeline-role">Software Engineer</h3>
+        <div class="timeline-company">eShare Ltd, Newbury, England</div>
+        <ul class="timeline-details">
+          <li>Implemented SonarQube static analysis; improved code quality from B+ to A.</li>
+          <li>Secured Docker ASP.NET &amp; Angular apps via OWASP ZAP fixes.</li>
+        </ul>
+        <div class="chips">
+          <div class="chip">SonarQube</div>
+          <div class="chip">Docker</div>
+          <div class="chip">Angular</div>
+          <div class="chip">Azure DevOps</div>
+        </div>
+      </div>
+
+      <!-- Chapter Organizer & Country Mentor -->
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 2016 – Dec 2020</div>
+        <h3 class="timeline-role">Chapter Organizer &amp; Country Mentor</h3>
+        <div class="timeline-company">Google Developer Group, Nairobi, Kenya</div>
+        <ul class="timeline-details">
+          <li>Activated 7 new &amp; reactivated 4 GDG chapters nationwide.</li>
+          <li>Led 10 Kenyan GDG leads to Google I/O 2017 (50% women).</li>
+          <li>Delivered 20+ talks &amp; code labs, empowering 2000+ developers.</li>
+        </ul>
+        <div class="chips">
+          <div class="chip">Community Leadership</div>
+          <div class="chip">Event Organizing</div>
+          <div class="chip">Public Speaking</div>
+          <div class="chip">Diversity &amp; Inclusion</div>
+        </div>
+      </div>
+
+      <!-- Software Engineer, Virtual City Ltd -->
+      <div class="timeline-item">
+        <div class="timeline-date">Jul 2016 – Dec 2016</div>
+        <h3 class="timeline-role">Software Engineer</h3>
+        <div class="timeline-company">Virtual City Ltd, Nairobi, Kenya</div>
+        <ul class="timeline-details">
+          <li>Automated data ingestion tools with C#/WPF/SQL, cutting integration time by 85%.</li>
+          <li class="links">
+            Open-sourced
+            <a href="https://github.com/denpalrius/Material-Message-Box" target="_blank" rel="noopener noreferrer">
+              Material UI WPF Message Box
+            </a>— 20k+ NuGet downloads.
+          </li>
+        </ul>
+        <div class="chips">
+          <div class="chip">C#</div>
+          <div class="chip">WPF</div>
+          <div class="chip">SQL</div>
+          <div class="chip">NuGet</div>
+        </div>
+        <div class="links">
+          <br>
+          <a href="https://github.com/denpalrius/Material-Message-Box" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/stars/denpalrius/Material-Message-Box?style=social"
+              alt="GitHub stars" />
+          </a>
+          <a href="https://github.com/denpalrius/Material-Message-Box/network/members" target="_blank"
+            rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/forks/denpalrius/Material-Message-Box?style=social"
+              alt="GitHub forks" />
+          </a>
+          <a href="https://www.nuget.org/packages/MaterialMessageBox/" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/nuget/dt/MaterialMessageBox?label=nuget%20downloads"
+              alt="NuGet downloads" />
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="blog" class="container">
+    <h2>Blog</h2>
+    <div class="grid">
+
+      <article class="card">
+        <img src="images/blog/efficient_frontier.jpeg" alt="Chart & code for RL portfolio optimization">
+        <h3>Exploring Reinforcement Learning for Portfolio Optimization</h3>
+        <p>Dive into how deep reinforcement learning algorithms—A2C, PPO, SAC and more—can be harnessed to maximize
+          returns and manage risk using FinRL and Stable-Baselines3.</p>
+        <a href="https://medium.com/@denpalrius/exploring-reinforcement-learning-for-portfolio-optimization-d438181a6772"
+          class="read-more" target="_blank" rel="noopener noreferrer">
+          Read More
+        </a>
+      </article>
+
+      <article class="card">
+        <img src="images/blog/federated_learning.jpg" alt="Federated learning schematic with security icons">
+        <h3>Balancing Security &amp; Efficiency in Federated Learning: Insights</h3>
+        <p>An in-depth look at the trade-offs between robustness and performance in federated learning systems, with
+          practical guidance on defending against Byzantine clients.</p>
+        <a href="https://www.linkedin.com/pulse/balancing-security-efficiency-federated-learning-insights-muticia-67gnf/?trackingId=%2ByCv0TXpQMesJD7uEgrgxA%3D%3D"
+          class="read-more" target="_blank" rel="noopener noreferrer">
+          Read More
+        </a>
+      </article>
+
+      <article class="card">
+        <img src="images/blog/io_2017.jpg" alt="Crowd at Google IO 2017">
+        <h3>Community Mention: "Nairobi DevFest”</h3>
+        <p>I’m featured in this DevFest Nairobi recap - check out the community highlights and a first-timer’s
+          perspective on Google Developer Group’s flagship DevFest event.</p>
+        <a href="https://gracekahinga.medium.com/nairobi-devfest2017-through-the-eyes-of-a-newbie-f007dc7e2779"
+          class="read-more" target="_blank" rel="noopener noreferrer">
+          Read More
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+
+  <!-- 
   <section id="gallery" class="container">
     <h2>Gallery</h2>
     <div class="gallery">
       <img src="path/to/photo1.jpg" alt="Gallery Image">
       <img src="path/to/photo2.jpg" alt="Gallery Image">
-      <img src="path/to/photo3.jpg" alt="Gallery Image">     
+      <img src="path/to/photo3.jpg" alt="Gallery Image">
     </div>
   </section> -->
 
 
   <section id="contact" class="container">
     <h2>Contact</h2>
-    <form action="mailto:dennismuticia@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p>Connect on <a href="mailto:dennismuticia@gmail.com">Email</a>, <a href="http://linkedin.com/in/dennisriungu" target="_blank">LinkedIn</a> &amp; <a href="https://github.com/denpalrius" target="_blank">GitHub</a>.</p>
+    <div>
+      <form id="contact-form">
+        <input type="hidden" name="_subject" value="New message from my site">
+        <input type="hidden" name="_captcha" value="false">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Success Modal -->
+      <div id="form-success-modal" class="modal hidden" role="dialog" aria-modal="true">
+        <div class="modal-content">
+          <p>🎉🎉🎉</p>
+          <p>Thanks for reaching out. Your message has been sent </p>
+          <br>
+          <p> I will revert as soon as possible.</p>
+          <button id="modal-close-btn" class="close-btn">Close</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="appointment-btn-container">
+      <p>Schedule a meeting with me</p>
+      <div class="appointment-btn"
+        data-schedule-url="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0AkSBOhd1YaheJTmslpX7mCAKJGihSFUMJbAsjTv4EAkdrtFaaYGRWxI4hpc0pQZMiQOp4ongn?gv=true"
+        data-label="Let’s Chat" data-color="#c1a57b">
+      </div>
+    </div>
+
   </section>
 
-  <script>
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      const theme = document.body.getAttribute('data-theme');
-      document.body.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light');
-    });
-  </script>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>Connect with me:</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/dennisriungu" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+          class="social-link">
+          <!-- LinkedIn SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.17h.07c.67-1.27 2.3-2.6 4.73-2.6 5.06 0 6 3.33 6 7.65V24h-5v-7.63c0-1.82-.03-4.15-2.53-4.15-2.53 0-2.92 1.97-2.92 4.01V24h-5V8z" />
+          </svg>
+        </a>
+
+        <a href="https://github.com/denpalrius" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+          class="social-link">
+          <!-- GitHub SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.29 9.42 7.84 10.95.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.19.7-3.87-1.54-3.87-1.54-.52-1.3-1.27-1.65-1.27-1.65-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.72 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11.08 11.08 0 012.89-.39c.98.01 1.97.13 2.89.39 2.2-1.5 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.84 1.18 3.1 0 4.44-2.69 5.42-5.26 5.71.41.35.77 1.04.77 2.1 0 1.52-.01 2.75-.01 3.13 0 .3.2.66.79.55A10.51 10.51 0 0023.5 12C23.5 5.65 18.35.5 12 .5z" />
+          </svg>
+        </a>
+
+        <a href="https://x.com/denpalrius" target="_blank" rel="noopener noreferrer" aria-label="X" class="social-link">
+          <!-- X (formerly Twitter) SVG -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 1 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z" />
+          </svg>
+        </a>
+
+      </div>
+
+      <p class="footer-credit">
+        © <span id="current-year"></span> Dennis Muticia. All rights reserved.
+      </p>
+      
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script defer src="https://calendar.google.com/calendar/scheduling-button-script.js"></script>
+
 </body>
+
 </html>
