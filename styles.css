@@ -17,6 +17,26 @@
   --project-card-bg: #444
 }
 
+
+
+/*─────────────────────────────────────────────────────────────────────────────
+  THEME TOGGLE BUTTON
+─────────────────────────────────────────────────────────────────────────────*/
+#theme-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+
 /*─────────────────────────────────────────────────────────────────────────────
   RESET & BASE
 ─────────────────────────────────────────────────────────────────────────────*/
@@ -392,18 +412,162 @@ form button {
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
-  THEME TOGGLE BUTTON
+  IN-PAGE SUCCESS MODAL
 ─────────────────────────────────────────────────────────────────────────────*/
-#theme-toggle {
+.modal {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: var(--bg-light);
+  color: var(--text-light);
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.close-btn {
+  margin-top: 1.5rem;
   background: var(--accent);
   color: #fff;
   border: none;
-  padding: 0.5rem;
-  border-radius: 50%;
-  font-size: 1.25rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
   cursor: pointer;
-  z-index: 999;
+  font-weight: 600;
+}
+
+
+/*─────────────────────────────────────────────────────────────────────────────
+  APPOINTMENT BUTTON CONTAINER
+─────────────────────────────────────────────────────────────────────────────*/
+.appointment-btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-light);
+  color: var(--text-light);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 480px;
+  margin: 2rem auto;
+}
+
+.appointment-btn-container p {
+  margin-bottom: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Ensure the button itself stays centered */
+.appointment-btn-container .appointment-btn {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;               /* full width up to container max */
+  max-width: 240px;          /* but don’t grow too large */
+}
+
+
+/*─────────────────────────────────────────────────────────────────────────────
+  STYLED GC APPOINTMENT BUTTON
+─────────────────────────────────────────────────────────────────────────────*/
+.gc-appointment-button {
+  background:      var(--accent)     !important;
+  color:           #fff             !important;
+  font-family:     'Inter', sans-serif !important;
+  font-weight:     600              !important;
+  font-size:       1rem             !important;
+  padding:         0.75rem 1.5rem   !important;
+  border:          none             !important;
+  border-radius:   8px              !important;
+  text-decoration: none             !important;
+  display:         inline-block     !important;
+  cursor:          pointer          !important;
+  box-shadow:      0 2px 4px rgba(0,0,0,0.1) !important;
+  transition:      opacity 0.2s     !important;
+}
+
+.gc-appointment-button:hover {
+  opacity: 0.9 !important;
+}
+
+.appointment-btn {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.gc-appointment-button {
+  margin: 0 !important;      /* kill any default margins */
+}
+
+
+
+/*─────────────────────────────────────────────────────────────────────────────
+  FOOTER & SOCIAL ICONS
+─────────────────────────────────────────────────────────────────────────────*/
+.footer {
+  background: var(--bg-light);
+  color: var(--text-light);
+  border-top: 1px solid var(--project-divider, #e0e0e0);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  gap: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--project-bg, #fff);
+  color: var(--accent);
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* ensure SVGs sit nicely inside their circles */
+.social-link svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.social-link:hover {
+  background: var(--accent);
+  color: var(--bg-light);
+}
+
+.footer-credit {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  opacity: 0.7;
 }
