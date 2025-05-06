@@ -1,0 +1,308 @@
+:root {
+  --bg-light: #f9f7f1;
+  --text-light: #2a2a2a;
+  --accent: #c1a57b;
+}
+
+[data-theme="dark"] {
+  --bg-light: #1a1a1a;
+  --text-light: #eaeaea;
+  --accent: #8b7e66;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  padding-top: 70px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg-light);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem 0;
+  z-index: 100;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  nav a {
+    margin: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header,
+section {
+  margin-bottom: 2rem;
+}
+
+#landing {
+  text-align: center;
+}
+
+#landing img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+#landing h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#landing p.subtitle {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+#resume-btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.chip {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 16px;
+  /* font-size: 0.9rem; */
+  /* padding: 0.5rem 1rem; */
+
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+}
+/* ── Projects Grid: 3 columns, 2 cols @ ≤900px, 1 col @ ≤600px ─────────── */
+#projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+@media (max-width: 900px) {
+  #projects .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  #projects .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Card Base ───────────────────────────────────────────────────────────── */
+#projects .project-card {
+  background: #fff;
+  color: var(--text-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* min-height: 300px; */
+}
+
+/* ── Content ─────────────────────────────────────────────────────────────── */
+#projects .project-card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+#projects .project-card .card-desc {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* ── Divider ─────────────────────────────────────────────────────────────── */
+#projects .project-card .card-divider {
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 1rem 0;
+}
+
+/* ── Footer (chips + star) ───────────────────────────────────────────────── */
+#projects .project-card .project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ── Chips (left) ───────────────────────────────────────────────────────── */
+#projects .project-card .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ── Star Button (right) ─────────────────────────────────────────────────── */
+#projects .project-card .project-link-btn {
+  margin-left: auto;
+} 
+
+/* — chip size smaller — */
+#projects .project-card .chip {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* — wrapper collapse logic — */
+.chips-wrapper {
+  position: relative;
+}
+.chips-wrapper .chips {
+  max-height: 3rem;        /* show only ~two rows */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.chips-wrapper.expanded .chips {
+  max-height: none;
+}
+.chips-wrapper .show-more {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* — ensure star-btn sits at bottom — */
+#projects .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#projects .project-footer {
+  margin-top: auto;
+}
+
+/* — divider styling for mild color — */
+#projects .card-divider {
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 1rem 0;
+}
+
+
+/* Blog-specific layout */
+#blog .grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  #blog .grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input,
+form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+#theme-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  z-index: 999;    /* make sure it floats on top */
+}
+
+
+/* ── Utility ────────────────────────────────────────────────────────────── */
+.padding-top-small {
+  padding-top: 0.5rem;
+}

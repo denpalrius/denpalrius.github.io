@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Dennis Muticia | Software Engineering & AI Leadership Portfolio">
-  <meta name="keywords" content="Software Engineer, AI Engineering, Cloud, Microservices, Federated Learning, Quantum Computing">
+  <meta name="keywords"
+    content="Dennis Muticia, Dennis Riungu, Software Engineer, AI Engineering, Cloud, Microservices">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <title>Dennis Muticia | Portfolio</title>
-  <style>
-    :root { --bg-light: #f9f7f1; --text-light: #2a2a2a; --accent: #c1a57b; }
-    [data-theme="dark"] { --bg-light: #1a1a1a; --text-light: #eaeaea; --accent: #8b7e66; }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg-light); color: var(--text-light); line-height: 1.6; scroll-behavior: smooth; padding-top: 70px; }
-    header, section { padding: 4rem 2rem; }
-    nav { position: fixed; top: 0; width: 100%; background: var(--bg-light); display: flex; justify-content: center; flex-wrap: wrap; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 1rem 0; z-index: 100; }
-    nav a { margin: 0 1rem; text-decoration: none; color: var(--text-light); font-weight: 600; }
-    @media (max-width: 600px) { nav a { margin: 0.5rem; font-size: 0.9rem; } }
-    .container { max-width: 1000px; margin: auto; }
-    #landing { display: flex; flex-direction: column; align-items: center; text-align: center; }
-    #landing img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem; }
-    #landing h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    #landing p.subtitle { font-size: 1.2rem; color: var(--accent); margin-bottom: 1rem; }
-    #resume-btn { background: var(--accent); color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; text-decoration: none; font-weight: 600; }
-    section h2 { font-size: 2rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent); display: inline-block; }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    .chip { background: var(--accent); color: #fff; padding: 0.5rem 1rem; border-radius: 16px; font-size: 0.9rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .card { background: #fff; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); position: relative; }
-    .card a { position: absolute; top: 1rem; right: 1rem; font-size: 1.2rem; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 1rem; }
-    .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
-    form { display: flex; flex-direction: column; gap: 1rem; }
-    form input, form textarea { padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px; }
-    form button { background: var(--accent); color: #fff; padding: 0.75rem; border: none; border-radius: 8px; font-weight: 600; }
-    #theme-toggle { position: fixed; bottom: 1rem; right: 1rem; background: var(--accent); color: #fff; border: none; padding: 0.5rem; border-radius: 50%; cursor: pointer; }
-    .padding-top-small { padding-top: 0.5rem; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+
+
+  <!-- <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/favicon.png">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@denpalrius">
+  <meta name="twitter:title" content="Dennis Muticia | Software Engineering & AI Leadership Portfolio">
+  <meta name="twitter:description" content="Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale, cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at orchestrating Agile transformations that elevate team velocity and quality.">
+  <meta name="twitter:image" content="images/profile.jpg">
+  <meta property="og:title" content="Dennis Muticia | Software Engineering & AI Leadership Portfolio">
+  <meta property="og:description" content="Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale, cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at orchestrating Agile transformations that elevate team velocity and quality.">
+  <meta property="og:image" content="images/profile.jpg">
+  <meta property="og:url" content="https://dennismuticia.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dennis Muticia">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="en_GB"> -->
 </head>
+
 <body data-theme="light">
-  <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
-  <nav class="container">
+  <button id="theme-toggle" aria-label="Toggle Theme">sdsd🌓dsdsds</button>
+  <nav>
     <a href="#landing">Home</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#research">Research</a>
     <a href="#experience">Experience</a>
     <a href="#blog">Blog</a>
     <a href="#gallery">Gallery</a>
@@ -54,30 +53,25 @@
   </nav>
 
 
-  <!-- <header id="landing" class="container">
-    <img src="path/to/profile.jpg" alt="Dennis Muticia">
-    <h1>Dennis Muticia</h1>
-    <p class="subtitle">Senior Software Engineer & Technical Lead</p>
-    <p>Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale, cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at orchestrating Agile transformations that elevate team velocity and quality.</p>
-    <a id="resume-btn" href="Dennis_Muticia_Resume.pdf" download>Download Resume</a>
-  </header> -->
-
-
   <header id="landing" class="container">
     <img src="images/prof-pic.jpg" alt="Dennis Muticia">
     <h1>Dennis Muticia</h1>
     <p class="subtitle">Senior Software Engineer & Technical Lead</p>
-    <p>Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale, cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at orchestrating Agile transformations that elevate team velocity and quality.</p>
+    <p>Visionary Software Engineering Leader with 9+ years driving cross-functional teams to deliver large-scale,
+      cloud-native systems. Expert at architecting secure, resilient microservices on Azure, GCP and AWS, and at
+      orchestrating Agile transformations that elevate team velocity and quality.</p>
     <br>
-    <a id="resume-btn" href="https://docs.google.com/document/d/1vje4uUo0iAIVX078PtjJisdFlYgHvaLjUhY0IVs8XoA/edit?tab=t.0" target="_blank" rel="noopener noreferrer" download>Download Resume</a>
+    <a id="resume-btn"
+      href="https://docs.google.com/document/d/1vje4uUo0iAIVX078PtjJisdFlYgHvaLjUhY0IVs8XoA/edit?tab=t.0"
+      target="_blank" rel="noopener noreferrer" download>Download Resume</a>
   </header>
 
-  
+
   <section id="skills" class="container">
     <h2>Skills</h2>
     <h3 class="padding-top-small">Team & Leadershp</h3>
     <div class="chips">
-      <div class="chip">Agile Planning</div>
+      <div class="chip">Agile Leadership</div>
       <div class="chip">Scrum</div>
       <div class="chip">Kanban</div>
       <div class="chip">XP</div>
@@ -105,6 +99,7 @@
       <div class="chip">SQL</div>
       <div class="chip">NoSQL</div>
       <div class="chip">VectorDB</div>
+      <div class="chip">Microservices</div>
       <div class="chip">Docker</div>
       <div class="chip">Kubernetes</div>
       <div class="chip">AWS</div>
@@ -120,103 +115,247 @@
       <div class="chip">Computer Vision</div>
       <div class="chip">LangChain</div>
       <div class="chip">Prompt Engineering</div>
+      <div class="chip">NLP</div>
       <div class="chip">LLMs</div>
       <div class="chip">RAG</div>
       <div class="chip">MLOps</div>
       <div class="chip">AWS SageMaker</div>
       <div class="chip">Vertex AI</div>
-      <div class="chip">Qiskit</div>
-    </div>
-  </section>
-
-
-  <section id="projects" class="container">
-    <h2>Projects & Open Source</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Distributed Data Processing Pipeline</h3>
-        <p><em>Jan 2025 – Feb 2025</em></p>
-        <p>Scalable event-driven microservices architecture with React/Next.js front-end, Python/NestJS processing, and real-time updates via FastAPI & NATS JetStream. Deployed with Docker Compose, Kubernetes & Terraform. <a href="https://github.com/denpalrius/data-processing-app" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">React</div><div class="chip">Next.js</div><div class="chip">Python</div><div class="chip">NestJS</div><div class="chip">FastAPI</div><div class="chip">NATS</div><div class="chip">Docker</div><div class="chip">Kubernetes</div><div class="chip">Terraform</div></div>
-      </div>
-      ... (rest of project cards unchanged) ...
-    </div>
-  </section>
-
-
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <h3>Software Engineering</h3>
-    <div class="chips">
-      <div class="chip">Python</div><div class="chip">TypeScript</div><div class="chip">Java</div><div class="chip">C#</div><div class="chip">SQL</div><div class="chip">NoSQL</div><div class="chip">Docker</div><div class="chip">Kubernetes</div><div class="chip">AWS</div><div class="chip">GCP</div><div class="chip">Azure</div><div class="chip">Spring Boot</div><div class="chip">NestJS</div>
-    </div>
-    <h3>AI Engineering</h3>
-    <div class="chips">
-      <div class="chip">LLMs</div><div class="chip">RAG</div><div class="chip">SageMaker</div><div class="chip">LangChain</div><div class="chip">PyTorch</div><div class="chip">TensorFlow</div><div class="chip">Computer Vision</div><div class="chip">Qiskit</div>
-    </div>
-    <h3>Leadership</h3>
-    <div class="chips">
-      <div class="chip">Scrum</div><div class="chip">Kanban</div><div class="chip">Coaching</div><div class="chip">Mentorship</div><div class="chip">Event Organizing</div>
-    </div>
-  </section>
-
-
-  <section id="projects" class="container">
-    <h2>Projects & Open Source</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Distributed Data Processing Pipeline</h3>
-        <p><em>Jan 2025 – Feb 2025</em></p>
-        <p>Scalable event-driven microservices architecture with React/Next.js front-end, Python/NestJS processing, and real-time updates via FastAPI & NATS JetStream. Deployed with Docker Compose, Kubernetes & Terraform. <a href="https://github.com/denpalrius/data-processing-app" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">React</div><div class="chip">Next.js</div><div class="chip">Python</div><div class="chip">NestJS</div><div class="chip">FastAPI</div><div class="chip">NATS</div><div class="chip">Docker</div><div class="chip">Kubernetes</div><div class="chip">Terraform</div></div>
-      </div>
-      <div class="card">
-        <h3>AI Skills Classification</h3>
-        <p><em>Sep 2024 – Dec 2024</em></p>
-        <p>Semi-supervised ML for classifying AI-related skills in imbalanced job postings with TF-IDF, Word2Vec & BERT embeddings, achieving 98% accuracy. <a href="https://github.com/denpalrius/ai-ml-job-trends" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">TF-IDF</div><div class="chip">Word2Vec</div><div class="chip">BERT</div><div class="chip">Python</div></div>
-      </div>
-      <div class="card">
-        <h3>Sports Action Recognition</h3>
-        <p><em>Oct 2024 – Dec 2024</em></p>
-        <p>Temporal sequence modeling using LSTM, GRU, 3D-CNN & pre-trained InceptionV3/VGG16 on UCF101 dataset. <a href="https://github.com/denpalrius/sports_action_recognition" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">LSTM</div><div class="chip">GRU</div><div class="chip">3D-CNN</div><div class="chip">TensorFlow</div></div>
-      </div>
-      <div class="card">
-        <h3>Federated Learning BFT</h3>
-        <p><em>Sep 2024 – Dec 2024</em></p>
-        <p>Benchmarking Robust Aggregation strategies (FedAvg, Krum, Trimmed Mean) under Byzantine attacks. <a href="https://github.com/denpalrius/bft-federated-learning" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">FedAvg</div><div class="chip">Krum</div><div class="chip">Trimmed Mean</div><div class="chip">Python</div></div>
-      </div>
-      <div class="card">
-        <h3>Grover’s Algorithm</h3>
-        <p><em>Jun 2024 – Jul 2024</em></p>
-        <p>Implemented Grover’s search on IBM Q using Qiskit, demonstrating quadratic speedup for unstructured search. <a href="https://github.com/denpalrius/grovers-algorithm" target="_blank">🔗</a></p>
-        <div class="chips"><div class="chip">Qiskit</div><div class="chip">Quantum</div><div class="chip">Python</div></div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section id="research" class="container">
-    <h2>Research & Publications</h2>
-    <div class="chips">
       <div class="chip">Federated Learning</div>
-      <div class="chip">Quantum Computing</div>
-      <div class="chip">NLP</div>
-      <div class="chip">Computer Vision</div>
-      <div class="chip">Microservices</div>
-      <div class="chip">Cloud Native</div>
-      <div class="chip">Agile Leadership</div>
     </div>
   </section>
-  
+
+
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>MSc in Computer Science (Artificial Intelligence)</strong>, University of South Dakota</li>
+      <li><strong>BSc in Computer Technology</strong>, Jomo Kenyatta University of Agriculture and Technology</li>
+    </ul>
+  </section>
+
+
+  <section id="projects" class="container">
+    <h2>Projects / Research</h2>
+    <div class="project-grid">
+
+      <!-- Material Message Box -->
+      <div class="project-card">
+        <div>
+          <h3>Material Message Box</h3>
+          <p class="card-desc">
+            WPF MaterialDesign MessageBox with customizable themes, RTL support &amp; clipboard copy functionality.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">C#</div>
+            <div class="chip">WPF</div>
+            <div class="chip">Material UI</div>
+            <div class="chip">NuGet</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/Material-Message-Box"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/Material-Message-Box on GitHub">
+          </a>
+          <a class="github-button" href="https://github.com/denpalrius/Material-Message-Box"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star"
+            data-size="large" data-show-count="true" aria-label="Star denpalrius/Material-Message-Box on GitHub">
+            Star
+          </a>
+        </div>
+      </div>
+
+      <!-- Distributed Data Pipeline -->
+      <div class="project-card">
+        <div>
+          <h3>Distributed Data Pipeline</h3>
+          <p class="card-desc">
+            Event-driven microservices with React, NestJS, FastAPI &amp; NATS JetStream, deployed via Docker, Kubernetes
+            &amp; Terraform.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">React</div>
+            <div class="chip">NestJS</div>
+            <div class="chip">FastAPI</div>
+            <div class="chip">NATS</div>
+            <div class="chip">Docker</div>
+            <div class="chip">K8s</div>
+            <div class="chip">Terraform</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/data-processing-app"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/data-processing-app on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <!-- AI Skills Classification -->
+      <div class="project-card">
+        <div>
+          <h3>AI Skills Classification</h3>
+          <p class="card-desc">
+            Semi-supervised ML for classifying AI-related skills in imbalanced job postings with TF-IDF, Word2Vec &amp;
+            BERT embeddings, achieving 98% accuracy.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">TF-IDF</div>
+            <div class="chip">Word2Vec</div>
+            <div class="chip">BERT</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/ai-ml-job-trends"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/ai-ml-job-trends on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <!-- Sports Action Recognition -->
+      <div class="project-card">
+        <div>
+          <h3>Sports Action Recognition</h3>
+          <p class="card-desc">
+            Temporal sequence modeling using LSTM, GRU, 3D-CNN &amp; pre-trained InceptionV3/VGG16 on the UCF101
+            dataset.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">LSTM</div>
+            <div class="chip">GRU</div>
+            <div class="chip">3D-CNN</div>
+            <div class="chip">InceptionV3</div>
+            <div class="chip">VGG16</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/sports_action_recognition"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/sports_action_recognition on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <!-- Portfolio Optimisation -->
+      <div class="project-card">
+        <div>
+          <h3>Portfolio Optimisation</h3>
+          <p class="card-desc">
+            Comparative analysis of deep reinforcement learning algorithms (A2C, PPO, SAC, DDPG, TD3) for portfolio
+            optimisation using FinRL and Stable-Baselines3 on historical market data.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">Python</div>
+            <div class="chip">Reinforcement Learning</div>
+            <div class="chip">Portfolio Optimization</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/portfolio-optimisation"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/portfolio-optimisation on GitHub">
+            View
+          </a>
+        </div>
+      </div>
+
+
+      <!-- Federated Learning BFT -->
+      <div class="project-card">
+        <div>
+          <h3>Federated Learning BFT</h3>
+          <p class="card-desc">
+            Benchmarking FedAvg, Krum &amp; Trimmed Mean under Byzantine attacks in a Python-based FL simulation.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">Federated Learning</div>
+            <div class="chip">FedAvg</div>
+            <div class="chip">Krum</div>
+            <div class="chip">Trimmed Mean</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/bft-federated-learning"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/bft-federated-learning on GitHub">
+          </a>
+        </div>
+      </div>
+
+      <!-- Grover’s Algorithm -->
+      <div class="project-card">
+        <div>
+          <h3>Grover’s Algorithm</h3>
+          <p class="card-desc">
+            Implemented Grover’s search algorithm on IBM Q using Qiskit, demonstrating quadratic speedup.
+          </p>
+        </div>
+
+        <div class="project-footer">
+          <div class="chips">
+            <div class="chip">Qiskit</div>
+            <div class="chip">Quantum Computing</div>
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="project-link-btn">
+          <a class="github-button" href="https://github.com/denpalrius/grovers-algorithm"
+            data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
+            data-size="large" aria-label="View denpalrius/grovers-algorithm on GitHub">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
 
   <section id="experience" class="container">
     <h2>Work Experience</h2>
     <ul>
       <li><strong>Graduate Researcher</strong>, University of South Dakota (MSc AI), Jan 2024 – Apr 2025</li>
-      <li><strong>Senior Software Engineer & Technical Lead</strong>, Dash Solutions Inc (NY, USA), Feb 2022 – Dec 2023
+      <li><strong>Senior Software Engineer & Technical Lead</strong>, Dash Solutions Inc (NY, USA),
+        Feb 2022 – Dec 2023
         <ul>
           <li>Led Wallet API microservice project on AWS; enhanced security & scalability.</li>
           <li>Migrated Spring Boot API to Redis cache, improving reliability by 35%.</li>
@@ -254,9 +393,18 @@
   <section id="blog" class="container">
     <h2>Blog</h2>
     <div class="grid">
-      <article class="card"><h3>Blog Post Title 1</h3><p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a></article>
-      <article class="card"><h3>Blog Post Title 2</h3><p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a></article>
-      <article class="card"><h3>Blog Post Title 3</h3><p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a></article>
+      <article class="card">
+        <h3>Blog Post Title 1</h3>
+        <p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a>
+      </article>
+      <article class="card">
+        <h3>Blog Post Title 2</h3>
+        <p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a>
+      </article>
+      <article class="card">
+        <h3>Blog Post Title 3</h3>
+        <p>Summary or excerpt…</p><a href="#" class="read-more">Read More</a>
+      </article>
     </div>
   </section>
 
@@ -265,7 +413,7 @@
     <div class="gallery">
       <img src="path/to/photo1.jpg" alt="Gallery Image">
       <img src="path/to/photo2.jpg" alt="Gallery Image">
-      <img src="path/to/photo3.jpg" alt="Gallery Image">     
+      <img src="path/to/photo3.jpg" alt="Gallery Image">
     </div>
   </section>
 
@@ -278,14 +426,13 @@
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p>Connect on <a href="mailto:dennismuticia@gmail.com">Email</a>, <a href="http://linkedin.com/in/dennisriungu" target="_blank">LinkedIn</a> &amp; <a href="https://github.com/denpalrius" target="_blank">GitHub</a>.</p>
+    <p>Connect on <a href="mailto:dennismuticia@gmail.com">Email</a>, <a href="http://linkedin.com/in/dennisriungu"
+        target="_blank">LinkedIn</a> &amp; <a href="https://github.com/denpalrius" target="_blank">GitHub</a>.</p>
   </section>
 
-  <script>
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      const theme = document.body.getAttribute('data-theme');
-      document.body.setAttribute('data-theme', theme === 'light' ? 'dark' : 'light');
-    });
-  </script>
+  <script src="script.js" defer></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
 </body>
+
 </html>
