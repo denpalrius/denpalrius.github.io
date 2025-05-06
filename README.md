@@ -1,4 +1,4 @@
-# Dennis Muticia Portfolio Website
+# Portfolio Website
 
 A responsive, theme-aware personal static portfolio website showcasing my projects, research, experience, skills, and blog posts.
 

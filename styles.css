@@ -2,22 +2,20 @@
   VARIABLES & THEMES
 ─────────────────────────────────────────────────────────────────────────────*/
 :root {
-  --bg-light:  #f9f7f1;
-  --text-light: #2a2a2a;
-  --card-light: #fff;
-  --accent:     #c1a57b;
-  --project-divider:  #e0e0e0;
+  --bg-light:          #f9f7f1;
+  --text-light:        #2a2a2a;
+  --card-light:        #ffffff;
+  --accent:            #c1a57b;
+  --project-divider:   #e0e0e0;
 }
 
 [data-theme="dark"] {
-  --bg-light:  #1a1a1a;
-  --text-light: #eaeaea;
-  --card-light: #2f2e2e;
-  --accent:     #8b7e66;
-  --project-card-bg: #444
+  --bg-light:          #1a1a1a;
+  --text-light:        #eaeaea;
+  --card-light:        #2f2e2e;
+  --accent:            #8b7e66;
+  --project-divider:   #444444;
 }
-
-
 
 /*─────────────────────────────────────────────────────────────────────────────
   THEME TOGGLE BUTTON
@@ -35,7 +33,6 @@
   cursor: pointer;
   z-index: 999;
 }
-
 
 /*─────────────────────────────────────────────────────────────────────────────
   RESET & BASE
@@ -70,7 +67,7 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
 
@@ -105,41 +102,183 @@ section {
 /*─────────────────────────────────────────────────────────────────────────────
   LANDING / HERO
 ─────────────────────────────────────────────────────────────────────────────*/
-#landing {
+.landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background: var(--bg-light);
   text-align: center;
 }
 
-#landing img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
+.landing-content {
+  max-width: 600px;
+  padding: 2rem 1rem;
 }
 
-#landing h1 {
-  font-size: 2.5rem;
+.landing-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.landing h1 {
+  font-size: 2.75rem;
   margin-bottom: 0.5rem;
 }
 
-#landing p.subtitle {
-  font-size: 1.2rem;
+.landing .subtitle {
+  font-size: 1.25rem;
   color: var(--accent);
   margin-bottom: 1rem;
 }
 
-#resume-btn {
-  display: inline-block;
+.landing .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Buttons side-by-side */
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.landing-buttons a,
+.landing-buttons .appointment-btn {
   background: var(--accent);
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.landing-buttons a:hover,
+.landing-buttons .appointment-btn:hover {
+  opacity: 0.9;
+}
+
+
+/*─────────────────────────────────────────────────────────────────────────────
+  ACTION BUTTONS: RESUME + APPOINTMENT SIDE-BY-SIDE
+─────────────────────────────────────────────────────────────────────────────*/
+.action-buttons {
+  display: flex;
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  gap: 1rem;                 /* space between buttons */
+  flex-wrap: wrap;           /* wrap on narrow screens */
+  margin-bottom: 2rem;
+}
+
+/* Ensure each child (the landing-buttons wrapper & the appointment-btn) shrinks to fit */
+.action-buttons > .landing-buttons,
+.action-buttons > .appointment-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  flex: none;                /* don’t stretch */
+  margin: 0;
+}
+
+/* Target both the <a> inside landing-buttons and whatever the widget injects */
+.action-buttons .landing-buttons a,
+.action-buttons .appointment-btn gc-scheduling-button,
+.action-buttons .appointment-btn .gc-appointment-button,
+.action-buttons .appointment-btn button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;          /* override any inline margins */
+  padding: 0.75rem 1.5rem !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  background: var(--accent) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s !important;
+  min-height: 42px;              /* equalize heights */
+}
+
+/* Hover state */
+.action-buttons .landing-buttons a:hover,
+.action-buttons .appointment-btn gc-scheduling-button:hover,
+.action-buttons .appointment-btn .gc-appointment-button:hover,
+.action-buttons .appointment-btn button:hover {
+  opacity: 0.9 !important;
+}
+
+
+/*─────────────────────────────────────────────────────────────────────────────
+  SOCIAL ICONS
+─────────────────────────────────────────────────────────────────────────────*/
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.social-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--card-light);
+  color: var(--accent);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-link svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.social-link:hover {
+  background: var(--accent);
+  color: var(--bg-light);
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
-  HEADINGS & UTILITY
+  INTERESTS CHIPS
+─────────────────────────────────────────────────────────────────────────────*/
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.interests .chip {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.4rem 0.9rem;
+  border-radius: 16px;
+  font-size: 0.9rem;
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  HEADINGS & UTILITIES
 ─────────────────────────────────────────────────────────────────────────────*/
 h2 {
   font-size: 2rem;
@@ -225,7 +364,6 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
 }
 
 #projects .project-link-btn {
@@ -262,7 +400,13 @@ h2 {
   margin-bottom: 2.5rem;
 }
 
-/* ── Content Styling ───────────────────────────────────────────────────────── */
+#experience .timeline-item > * {
+  margin-left: 1.5rem; /* offset to align with the line */
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  CONTENT STYLING
+─────────────────────────────────────────────────────────────────────────────*/
 #experience .timeline-date {
   font-size: 0.9rem;
   font-weight: 600;
@@ -278,14 +422,12 @@ h2 {
 
 #experience .timeline-company {
   font-style: italic;
-  margin-bottom: 0.75rem;
   color: #555;
+  margin-bottom: 0.75rem;
 }
 
 #experience .timeline-details {
   list-style: disc inside;
-  margin: 0;
-  padding: 0;
 }
 
 #experience .timeline-details li {
@@ -293,22 +435,7 @@ h2 {
   line-height: 1.4;
 }
 
-/* ── Chips & Links Styling ───────────────────────────────────────────────── */
-#experience .timeline-item .chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
-}
-
-#experience .timeline-item .chip {
-  background: var(--accent);
-  color: #fff;
-  padding: 0.25rem 0.75rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
-}
-
+#experience .timeline-item .chips,
 #experience .timeline-item .links {
   margin-top: 0.5rem;
 }
@@ -330,10 +457,16 @@ h2 {
   margin-top: 1rem;
 }
 
+@media (max-width: 900px) {
+  #blog .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 #blog .card {
   display: flex;
   flex-direction: column;
-  background: var(--project-bg);    /* theme-aware from your earlier setup */
+  background: var(--card-light);
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -363,13 +496,6 @@ h2 {
   text-decoration: none;
 }
 
-
-@media (max-width: 900px) {
-  #blog .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /*─────────────────────────────────────────────────────────────────────────────
   GALLERY
 ─────────────────────────────────────────────────────────────────────────────*/
@@ -387,7 +513,7 @@ h2 {
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
-  CONTACT FORM
+  CONTACT FORM & MODAL
 ─────────────────────────────────────────────────────────────────────────────*/
 form {
   display: flex;
@@ -411,9 +537,7 @@ form button {
   font-weight: 600;
 }
 
-/*─────────────────────────────────────────────────────────────────────────────
-  IN-PAGE SUCCESS MODAL
-─────────────────────────────────────────────────────────────────────────────*/
+/* success modal */
 .modal {
   position: fixed;
   top: 0; left: 0;
@@ -425,9 +549,7 @@ form button {
   z-index: 1000;
 }
 
-.modal.hidden {
-  display: none;
-}
+.modal.hidden { display: none; }
 
 .modal-content {
   background: var(--bg-light);
@@ -449,74 +571,66 @@ form button {
   cursor: pointer;
   font-weight: 600;
 }
-
-
 /*─────────────────────────────────────────────────────────────────────────────
   APPOINTMENT BUTTON CONTAINER
 ─────────────────────────────────────────────────────────────────────────────*/
 .appointment-btn-container {
+  /* no background or forced width */
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  margin-top: clamp(16px, 4%, 24px) !important;
+  /* center content horizontally */
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  background: var(--bg-light);
-  color: var(--text-light);
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 480px;
-  margin: 2rem auto;
+  gap: 0.5rem;
 }
 
 .appointment-btn-container p {
-  margin-bottom: 1.25rem;
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.4;
+  /* reset margins and inherit text styling */
+  margin: 0;
+  color: var(--text-light);
+  font-size: 1rem;
+  text-align: center; /* center text */
 }
 
-/* Ensure the button itself stays centered */
 .appointment-btn-container .appointment-btn {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 100%;               /* full width up to container max */
-  max-width: 240px;          /* but don’t grow too large */
+  /* let the widget size itself */
+  display: inline-flex !important;
+  width: auto !important;
+  margin: 0 !important;
 }
 
 
 /*─────────────────────────────────────────────────────────────────────────────
-  STYLED GC APPOINTMENT BUTTON
+  APPOINTMENT BUTTON (JS-INJECTED)
 ─────────────────────────────────────────────────────────────────────────────*/
+.appointment-btn {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
 .gc-appointment-button {
-  background:      var(--accent)     !important;
-  color:           #fff             !important;
-  font-family:     'Inter', sans-serif !important;
-  font-weight:     600              !important;
-  font-size:       1rem             !important;
-  padding:         0.75rem 1.5rem   !important;
-  border:          none             !important;
-  border-radius:   8px              !important;
-  text-decoration: none             !important;
-  display:         inline-block     !important;
-  cursor:          pointer          !important;
-  box-shadow:      0 2px 4px rgba(0,0,0,0.1) !important;
-  transition:      opacity 0.2s     !important;
+  background: var(--accent)        !important;
+  color:      #fff                  !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600                 !important;
+  font-size:   1rem                !important;
+  padding:     0.75rem 1.5rem      !important;
+  border:      none                !important;
+  border-radius: 8px               !important;
+  cursor:      pointer             !important;
+  box-shadow:  0 2px 4px rgba(0,0,0,0.1) !important;
+  transition:  opacity 0.2s        !important;
+  margin:      0 !important;
 }
 
 .gc-appointment-button:hover {
   opacity: 0.9 !important;
 }
 
-.appointment-btn {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-}
-
-.gc-appointment-button {
-  margin: 0 !important;      /* kill any default margins */
-}
 
 
 
@@ -526,7 +640,7 @@ form button {
 .footer {
   background: var(--bg-light);
   color: var(--text-light);
-  border-top: 1px solid var(--project-divider, #e0e0e0);
+  border-top: 1px solid var(--project-divider);
 }
 
 .footer-content {
@@ -549,13 +663,12 @@ form button {
   justify-content: center;
   width: 2.75rem;
   height: 2.75rem;
-  background: var(--project-bg, #fff);
+  background: var(--card-light);
   color: var(--accent);
   border-radius: 50%;
   transition: background 0.2s, color 0.2s;
 }
 
-/* ensure SVGs sit nicely inside their circles */
 .social-link svg {
   width: 1.25rem;
   height: 1.25rem;
@@ -568,6 +681,6 @@ form button {
 
 .footer-credit {
   font-size: 0.875rem;
-  color: var(--text-light);
   opacity: 0.7;
 }
+
