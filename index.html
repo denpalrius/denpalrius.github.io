@@ -44,7 +44,12 @@
 </head>
 
 <body data-theme="light">
+
   <nav class="navbar">
+    <div class="nav-brand">
+      <a href="#landing">DM</a>
+    </div>
+  
     <div class="nav-links">
       <a href="#landing">Home</a>
       <a href="#skills">Skills</a>
@@ -54,13 +59,20 @@
       <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
     </div>
-
-    <button id="theme-toggle" aria-label="Toggle theme">
-      <span class="icon-moon">🌙</span>
-      <span class="icon-sun">☀️</span>
-    </button>
-    
+  
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Toggle theme">
+        <span class="icon-moon">🌙</span>
+        <span class="icon-sun">☀️</span>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
   </nav>
+  
 
 
   <header id="landing" class="landing container">

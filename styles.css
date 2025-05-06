@@ -39,32 +39,40 @@ body {
 
 
 /*─────────────────────────────────────────────────────────────────────────────
-  NAVBAR LAYOUT
+  NAVBAR
 ─────────────────────────────────────────────────────────────────────────────*/
 .navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--bg-light);
-  padding: 0.75rem 2rem;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  padding: 0.75rem 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 100;
 }
 
+/* left: brand */
+.nav-brand a {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+/* center: links */
 .nav-links {
+  flex: 1;                     /* take all available middle space */
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: center;     /* center them horizontally */
+  gap: 1.25rem;
 }
 
 .nav-links a {
   color: var(--text-light);
   font-weight: 600;
   text-decoration: none;
-  padding: 0.25rem 0.5rem;
   transition: color 0.2s;
 }
 
@@ -72,22 +80,25 @@ body {
   color: var(--accent);
 }
 
-/*─────────────────────────────────────────────────────────────────────────────
-  THEME TOGGLE BUTTON
-─────────────────────────────────────────────────────────────────────────────*/
+/* right: actions (theme + burger) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* theme toggle */
 #theme-toggle {
-  background: transparent;
+  background: none;
   border: none;
-  padding: 0.25rem;
   font-size: 1.25rem;
-  cursor: pointer;
   color: var(--text-light);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
+  padding: 0.25rem;
+  transition: color 0.2s;
 }
-
 #theme-toggle:hover {
   color: var(--accent);
 }
@@ -97,10 +108,68 @@ body {
 #theme-toggle .icon-sun {
   display: none;
 }
-
-/* show the correct icon based on current theme */
 body[data-theme="light"] #theme-toggle .icon-moon { display: inline; }
 body[data-theme="dark"]  #theme-toggle .icon-sun  { display: inline; }
+
+/* hamburger (hidden desktop) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle .bar {
+  width: 100%;
+  height: 2px;
+  background: var(--text-light);
+  border-radius: 1px;
+  transition: background 0.2s;
+}
+
+.nav-toggle:hover .bar {
+  background: var(--accent);
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  MOBILE BEHAVIOR
+─────────────────────────────────────────────────────────────────────────────*/
+@media (max-width: 768px) {
+  /* show burger, hide theme toggle in collapsed menu */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* hide links by default */
+  .nav-links {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    flex-direction: column;
+    background: var(--bg-light);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .navbar.open .nav-links {
+    max-height: 500px; /* big enough for all items */
+  }
+
+  /* make each link + theme toggle full width */
+  .nav-links a,
+  #theme-toggle {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+}
+
 
 /*─────────────────────────────────────────────────────────────────────────────
   LAYOUT CONTAINER
@@ -434,6 +503,10 @@ h2 {
 
 #projects .project-link-btn {
   margin-left: auto;
+}
+
+#projects .project-link-btn a {
+  color: var(--bg-light);
 }
 
 #projects .project-card .chip {

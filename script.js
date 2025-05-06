@@ -1,19 +1,44 @@
-// Theme Toggle
+// Navigation Bar & Toggle
 document.addEventListener('DOMContentLoaded', () => {
-  const btn   = document.getElementById('theme-toggle');
-  const saved = localStorage.getItem('theme');
+  const navbar   = document.querySelector('.navbar');
+  const toggle   = document.querySelector('.nav-toggle');
+  const themeBtn = document.getElementById('theme-toggle');
+  const saved    = localStorage.getItem('theme');
+  const initial  = saved === 'dark' ? 'dark' : 'light';
 
-  // Initialize theme
-  const initial = saved === 'dark' ? 'dark' : 'light';
+  // init theme
   document.body.dataset.theme = initial;
 
-  // Toggle on click
-  btn.addEventListener('click', () => {
+  // hamburger toggle
+  toggle.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+  });
+
+  // theme toggle
+  themeBtn.addEventListener('click', () => {
     const next = document.body.dataset.theme === 'light' ? 'dark' : 'light';
     document.body.dataset.theme = next;
     localStorage.setItem('theme', next);
   });
 });
+
+
+// Theme Toggle
+// document.addEventListener('DOMContentLoaded', () => {
+//   const btn   = document.getElementById('theme-toggle');
+//   const saved = localStorage.getItem('theme');
+
+//   // Initialize theme
+//   const initial = saved === 'dark' ? 'dark' : 'light';
+//   document.body.dataset.theme = initial;
+
+//   // Toggle on click
+//   btn.addEventListener('click', () => {
+//     const next = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+//     document.body.dataset.theme = next;
+//     localStorage.setItem('theme', next);
+//   });
+// });
 
 
 // Contact Form Submission
