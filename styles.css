@@ -17,37 +17,6 @@
   --project-divider:   #444444;
 }
 
-
-/*─────────────────────────────────────────────────────────────────────────────
-  THEME TOGGLE BUTTON (styled & visible)
-─────────────────────────────────────────────────────────────────────────────*/
-#theme-toggle {
-  position: fixed;
-  top: 1.5rem;
-  left: 1.5rem;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  background: var(--accent);
-  color: var(--bg-light);
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  z-index: 1001;
-  transition: filter 0.2s ease, transform 0.2s ease;
-}
-
-#theme-toggle:hover {
-  filter: brightness(1.2);
-  transform: scale(1.05);
-}
-
-
 /*─────────────────────────────────────────────────────────────────────────────
   RESET & BASE
 ─────────────────────────────────────────────────────────────────────────────*/
@@ -68,36 +37,70 @@ body {
   padding-top: 70px;
 }
 
+
 /*─────────────────────────────────────────────────────────────────────────────
-  NAVIGATION
+  NAVBAR LAYOUT
 ─────────────────────────────────────────────────────────────────────────────*/
-nav {
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-light);
+  padding: 0.75rem 2rem;
   position: fixed;
   top: 0;
   width: 100%;
-  background: var(--bg-light);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 100;
 }
 
-nav a {
-  margin: 0 1rem;
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links a {
   color: var(--text-light);
   font-weight: 600;
   text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s;
 }
 
-@media (max-width: 600px) {
-  nav a {
-    margin: 0.5rem;
-    font-size: 0.9rem;
-  }
+.nav-links a:hover {
+  color: var(--accent);
 }
+
+/*─────────────────────────────────────────────────────────────────────────────
+  THEME TOGGLE BUTTON
+─────────────────────────────────────────────────────────────────────────────*/
+#theme-toggle {
+  background: transparent;
+  border: none;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+#theme-toggle:hover {
+  color: var(--accent);
+}
+
+/* hide both icons by default */
+#theme-toggle .icon-moon,
+#theme-toggle .icon-sun {
+  display: none;
+}
+
+/* show the correct icon based on current theme */
+body[data-theme="light"] #theme-toggle .icon-moon { display: inline; }
+body[data-theme="dark"]  #theme-toggle .icon-sun  { display: inline; }
 
 /*─────────────────────────────────────────────────────────────────────────────
   LAYOUT CONTAINER

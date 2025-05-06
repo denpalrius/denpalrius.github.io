@@ -1,10 +1,20 @@
-document.getElementById("theme-toggle").addEventListener("click", () => {
-  const theme = document.body.getAttribute("data-theme");
-  document.body.setAttribute(
-    "data-theme",
-    theme === "light" ? "dark" : "light"
-  );
+// Theme Toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const btn   = document.getElementById('theme-toggle');
+  const saved = localStorage.getItem('theme');
+
+  // Initialize theme
+  const initial = saved === 'dark' ? 'dark' : 'light';
+  document.body.dataset.theme = initial;
+
+  // Toggle on click
+  btn.addEventListener('click', () => {
+    const next = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+    document.body.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
 });
+
 
 // Contact Form Submission
 
