@@ -1,6 +1,6 @@
 # Dennis Muticia Portfolio Website
 
-A responsive, theme-aware personal portfolio website showcasing my projects, research, experience, skills, and blog posts.
+A responsive, theme-aware personal static portfolio website showcasing my projects, research, experience, skills, and blog posts.
 
 ## Live Site
 
