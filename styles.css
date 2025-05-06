@@ -1,16 +1,24 @@
+/*─────────────────────────────────────────────────────────────────────────────
+  VARIABLES & THEMES
+─────────────────────────────────────────────────────────────────────────────*/
 :root {
-  --bg-light: #f9f7f1;
+  --bg-light:  #f9f7f1;
   --text-light: #2a2a2a;
-  --accent: #c1a57b;
+  --accent:     #c1a57b;
 }
 
 [data-theme="dark"] {
-  --bg-light: #1a1a1a;
+  --bg-light:  #1a1a1a;
   --text-light: #eaeaea;
-  --accent: #8b7e66;
+  --accent:     #8b7e66;
 }
 
-* {
+/*─────────────────────────────────────────────────────────────────────────────
+  RESET & BASE
+─────────────────────────────────────────────────────────────────────────────*/
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -25,6 +33,9 @@ body {
   padding-top: 70px;
 }
 
+/*─────────────────────────────────────────────────────────────────────────────
+  NAVIGATION
+─────────────────────────────────────────────────────────────────────────────*/
 nav {
   position: fixed;
   top: 0;
@@ -34,16 +45,16 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 100;
 }
 
 nav a {
   margin: 0 1rem;
-  text-decoration: none;
   color: var(--text-light);
   font-weight: 600;
+  text-decoration: none;
 }
 
 @media (max-width: 600px) {
@@ -53,9 +64,12 @@ nav a {
   }
 }
 
+/*─────────────────────────────────────────────────────────────────────────────
+  LAYOUT CONTAINER
+─────────────────────────────────────────────────────────────────────────────*/
 .container {
   max-width: 1000px;
-  margin: auto;
+  margin: 0 auto;
   padding: 2rem;
 }
 
@@ -64,6 +78,9 @@ section {
   margin-bottom: 2rem;
 }
 
+/*─────────────────────────────────────────────────────────────────────────────
+  LANDING / HERO
+─────────────────────────────────────────────────────────────────────────────*/
 #landing {
   text-align: center;
 }
@@ -88,22 +105,32 @@ section {
 }
 
 #resume-btn {
+  display: inline-block;
   background: var(--accent);
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border: none;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
 }
 
+/*─────────────────────────────────────────────────────────────────────────────
+  HEADINGS & UTILITY
+─────────────────────────────────────────────────────────────────────────────*/
 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--accent);
   display: inline-block;
+  border-bottom: 2px solid var(--accent);
 }
 
+.padding-top-small {
+  padding-top: 0.5rem;
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  CHIPS
+─────────────────────────────────────────────────────────────────────────────*/
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -115,146 +142,183 @@ h2 {
   background: var(--accent);
   color: #fff;
   border-radius: 16px;
-  /* font-size: 0.9rem; */
-  /* padding: 0.5rem 1rem; */
-
   font-size: 0.9rem;
   padding: 0.3rem 0.8rem;
 }
-/* ── Projects Grid: 3 columns, 2 cols @ ≤900px, 1 col @ ≤600px ─────────── */
+
+/*─────────────────────────────────────────────────────────────────────────────
+  PROJECTS GRID & CARDS
+─────────────────────────────────────────────────────────────────────────────*/
 #projects .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 1rem;
 }
+
 @media (max-width: 900px) {
   #projects .project-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 600px) {
   #projects .project-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* ── Card Base ───────────────────────────────────────────────────────────── */
-#projects .project-card {
+.project-card {
   background: #fff;
   color: var(--text-light);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* min-height: 300px; */
 }
 
-/* ── Content ─────────────────────────────────────────────────────────────── */
-#projects .project-card h3 {
-  margin: 0;
+.project-card h3 {
   font-size: 1.25rem;
+  margin: 0;
 }
 
-#projects .project-card .card-desc {
+.card-desc {
   flex-grow: 1;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   line-height: 1.4;
 }
 
-/* ── Divider ─────────────────────────────────────────────────────────────── */
-#projects .project-card .card-divider {
+.card-divider {
   border: none;
   height: 1px;
   background: #e0e0e0;
   margin: 1rem 0;
 }
 
-/* ── Footer (chips + star) ───────────────────────────────────────────────── */
-#projects .project-card .project-footer {
+.project-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
-/* ── Chips (left) ───────────────────────────────────────────────────────── */
-#projects .project-card .chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-/* ── Star Button (right) ─────────────────────────────────────────────────── */
-#projects .project-card .project-link-btn {
+.project-link-btn {
   margin-left: auto;
-} 
+}
 
-/* — chip size smaller — */
-#projects .project-card .chip {
+.project-card .chip {
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
 }
 
-/* — wrapper collapse logic — */
-.chips-wrapper {
+/*─────────────────────────────────────────────────────────────────────────────
+  EXPERIENCE TIMELINE (no dots)
+─────────────────────────────────────────────────────────────────────────────*/
+#experience .timeline {
   position: relative;
+  padding-left: 2.5rem;
+  margin-top: 2rem;
 }
-.chips-wrapper .chips {
-  max-height: 3rem;        /* show only ~two rows */
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+
+#experience .timeline::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--accent);
+  border-radius: 2px;
 }
-.chips-wrapper.expanded .chips {
-  max-height: none;
+
+#experience .timeline-item {
+  position: relative;
+  margin-bottom: 2.5rem;
 }
-.chips-wrapper .show-more {
-  background: none;
-  border: none;
+
+/* ── Content Styling ───────────────────────────────────────────────────────── */
+#experience .timeline-date {
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--accent);
-  cursor: pointer;
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
-/* — ensure star-btn sits at bottom — */
-#projects .project-card {
+#experience .timeline-role {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+#experience .timeline-company {
+  font-style: italic;
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+#experience .timeline-details {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+}
+
+#experience .timeline-details li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* ── Chips & Links Styling ───────────────────────────────────────────────── */
+#experience .timeline-item .chips {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#projects .project-footer {
-  margin-top: auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-/* — divider styling for mild color — */
-#projects .card-divider {
-  border: none;
-  height: 1px;
-  background: #e0e0e0;
-  margin: 1rem 0;
+#experience .timeline-item .chip {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+#experience .timeline-item .links {
+  margin-top: 0.5rem;
+}
+
+#experience .timeline-item .links a {
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 1rem;
 }
 
 
-/* Blog-specific layout */
+/*─────────────────────────────────────────────────────────────────────────────
+  BLOG
+─────────────────────────────────────────────────────────────────────────────*/
 #blog .grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 1rem;
 }
 
 @media (max-width: 900px) {
   #blog .grid {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Gallery */
+/*─────────────────────────────────────────────────────────────────────────────
+  GALLERY
+─────────────────────────────────────────────────────────────────────────────*/
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
 }
 
@@ -265,6 +329,9 @@ h2 {
   border-radius: 8px;
 }
 
+/*─────────────────────────────────────────────────────────────────────────────
+  CONTACT FORM
+─────────────────────────────────────────────────────────────────────────────*/
 form {
   display: flex;
   flex-direction: column;
@@ -287,6 +354,9 @@ form button {
   font-weight: 600;
 }
 
+/*─────────────────────────────────────────────────────────────────────────────
+  THEME TOGGLE BUTTON
+─────────────────────────────────────────────────────────────────────────────*/
 #theme-toggle {
   position: fixed;
   bottom: 1rem;
@@ -296,13 +366,7 @@ form button {
   border: none;
   padding: 0.5rem;
   border-radius: 50%;
-  cursor: pointer;
   font-size: 1.25rem;
-  z-index: 999;    /* make sure it floats on top */
-}
-
-
-/* ── Utility ────────────────────────────────────────────────────────────── */
-.padding-top-small {
-  padding-top: 0.5rem;
+  cursor: pointer;
+  z-index: 999;
 }

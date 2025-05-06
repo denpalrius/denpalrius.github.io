@@ -41,7 +41,7 @@
 </head>
 
 <body data-theme="light">
-  <button id="theme-toggle" aria-label="Toggle Theme">sdsd🌓dsdsds</button>
+  <button id="theme-toggle" aria-label="Toggle Theme">🌓</button>
   <nav>
     <a href="#landing">Home</a>
     <a href="#skills">Skills</a>
@@ -160,7 +160,20 @@
         <hr class="card-divider">
 
         <div class="project-link-btn">
-          <a class="github-button" href="https://github.com/denpalrius/Material-Message-Box"
+          <a href="https://github.com/denpalrius/Material-Message-Box" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/stars/denpalrius/Material-Message-Box?style=social"
+                 alt="GitHub stars" />
+          </a>
+          <a href="https://github.com/denpalrius/Material-Message-Box/network/members" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/forks/denpalrius/Material-Message-Box?style=social"
+                 alt="GitHub forks" />
+          </a>
+          <a href="https://www.nuget.org/packages/MaterialMessageBox/" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/nuget/dt/MaterialMessageBox?label=nuget%20downloads"
+                 alt="NuGet downloads" />
+          </a>
+
+          <!-- <a class="github-button" href="https://github.com/denpalrius/Material-Message-Box"
             data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
             data-size="large" aria-label="View denpalrius/Material-Message-Box on GitHub">
           </a>
@@ -168,7 +181,7 @@
             data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-star"
             data-size="large" data-show-count="true" aria-label="Star denpalrius/Material-Message-Box on GitHub">
             Star
-          </a>
+          </a> -->
         </div>
       </div>
 
@@ -286,7 +299,6 @@
           <a class="github-button" href="https://github.com/denpalrius/portfolio-optimisation"
             data-color-scheme="no-preference: light; light: light; dark: light;" data-icon="octicon-mark-github"
             data-size="large" aria-label="View denpalrius/portfolio-optimisation on GitHub">
-            View
           </a>
         </div>
       </div>
@@ -350,44 +362,162 @@
   </section>
 
 
+
   <section id="experience" class="container">
     <h2>Work Experience</h2>
-    <ul>
-      <li><strong>Graduate Researcher</strong>, University of South Dakota (MSc AI), Jan 2024 – Apr 2025</li>
-      <li><strong>Senior Software Engineer & Technical Lead</strong>, Dash Solutions Inc (NY, USA),
-        Feb 2022 – Dec 2023
-        <ul>
-          <li>Led Wallet API microservice project on AWS; enhanced security & scalability.</li>
-          <li>Migrated Spring Boot API to Redis cache, improving reliability by 35%.</li>
-          <li>Implemented AWS SQS priority queuing & Datadog monitoring, reducing incidents by 40%.</li>
+  
+    <div class="timeline">
+  
+      <!-- Graduate Researcher -->
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2024 – Present</div>
+        <h3 class="timeline-role">Graduate Researcher (Artificial Intelligence)</h3>
+        <div class="timeline-company">University of South Dakota</div>
+        <div class="chips">
+          <div class="chip">Python</div>
+          <div class="chip">PyTorch</div>
+          <div class="chip">TensorFlow</div>
+          <div class="chip">NLP Research</div>
+          <div class="chip">Computer Vision</div>
+          <div class="chip">Reinforcement Learning</div>
+        </div>
+      </div>
+  
+      <!-- Senior Software Engineer & Technical Lead -->
+      <div class="timeline-item">
+        <div class="timeline-date">Feb 2022 – Dec 2023</div>
+        <h3 class="timeline-role">Senior Software Engineer</h3>
+        <div class="timeline-company">Dash Solutions Inc, New York, USA</div>
+        <ul class="timeline-details">
+          <li>Led Wallet API microservice project on AWS; shipped first iteration in two months.</li>
+          <li>Migrated core Spring Boot API to Redis distributed cache on AWS ElasticCache</li>
+          <li>Implemented AWS SQS priority queuing for real-time critical alerts.</li>
         </ul>
-      </li>
-      <li><strong>Senior Software & DevOps Engineer</strong>, Smartmile GmbH (Germany), Apr 2021 – Feb 2022
-        <ul>
-          <li>Built Node.js microservices & React frontends on GCP, cutting latency by 20%.</li>
-          <li>Integrated BigQuery with GDPR-compliant telemetry pipelines.</li>
+        <div class="chips">
+          <div class="chip">Java</div>
+          <div class="chip">Spring Boot</div>
+          <div class="chip">AWS SQS</div>
+          <div class="chip">AWS Fargate</div>
+          <div class="chip">AWS Lambda</div>
+          <div class="chip">Redis</div>
+        </div>
+      </div>
+  
+      <!-- Senior Software & DevOps Engineer -->
+      <div class="timeline-item">
+        <div class="timeline-date">Apr 2021 – Feb 2022</div>
+        <h3 class="timeline-role">Senior Software &amp; DevOps Engineer</h3>
+        <div class="timeline-company">Smartmile Deutschland GmbH, Nagold, Germany</div>
+        <ul class="timeline-details">
+          <li>Developed Node.js APIs &amp; React.js apps for parcel locker machines across Europe.</li>
+          <li>Trained team on Scrum; established bi-weekly sprint practices.</li>
+          <li>Optimized core APIs—improved latency 20% via load testing.</li>
         </ul>
-      </li>
-      <li><strong>Tech Lead</strong>, Orteo Payment Systems (Kenya), Oct 2018 – Jan 2021
-        <ul>
-          <li>Architected secure microservices & payment gateway; scaled team from 2 to 7 engineers.</li>
-          <li>Led GRC strategy & external security assessments for banking integrations.</li>
+        <div class="chips">
+          <div class="chip">Node.js</div>
+          <div class="chip">React.js</div>
+          <div class="chip">GCP</div>
+          <div class="chip">Google Cloud Run</div>
+          <div class="chip">Scrum</div>
+          <div class="chip">Load Testing</div>
+          <div class="chip">APM</div>
+        </div>
+      </div>
+  
+      <!-- Tech Lead -->
+      <div class="timeline-item">
+        <div class="timeline-date">Oct 2018 – Jan 2021</div>
+        <h3 class="timeline-role">Tech Lead</h3>
+        <div class="timeline-company">Orteo Payment Systems Limited, Nairobi, Kenya</div>
+        <ul class="timeline-details">
+          <li>Orchestrated security-first microservice architecture and payment gateway.</li>
+          <li>Scaled from 2 engineers to 7 members across 3 functional teams.</li>
+          <li>Implemented agile across Dev, QA, DevOps &amp; Cybersecurity—90–98% sprint delivery.</li>
+          <li>Spearheaded GRC strategy &amp; secure banking integrations.</li>
         </ul>
-      </li>
-      <li><strong>Software Engineer</strong>, eShare Ltd (UK), Jun 2017 – Sep 2018
-        <ul>
-          <li>Introduced SonarQube, raising code quality from B+ to A.</li>
-          <li>Secured Docker & Angular apps; built CI/CD pipelines in Azure DevOps.</li>
+        <div class="chips">
+          <div class="chip">Microservices</div>
+          <div class="chip">Agile</div>
+          <div class="chip">GRC</div>
+          <div class="chip">Payment Gateway</div>
+        </div>
+      </div>
+  
+      <!-- Software Engineer, eShare Ltd -->
+      <div class="timeline-item">
+        <div class="timeline-date">Jun 2017 – Sep 2018</div>
+        <h3 class="timeline-role">Software Engineer</h3>
+        <div class="timeline-company">eShare Ltd, Newbury, England</div>
+        <ul class="timeline-details">
+          <li>Implemented SonarQube static analysis; improved code quality from B+ to A.</li>
+          <li>Secured Docker ASP.NET &amp; Angular apps via OWASP ZAP fixes.</li>
         </ul>
-      </li>
-      <li><strong>Software Engineer</strong>, Virtual City Ltd (Kenya), Jul 2016 – Dec 2016
-        <ul>
-          <li>Automated C#/WPF/SQL ingestion tools, reducing integration time by 85%.</li>
-          <li>Open-sourced Material UI WPF MessageBox with 19k+ NuGet downloads.</li>
+        <div class="chips">
+          <div class="chip">SonarQube</div>
+          <div class="chip">Docker</div>
+          <div class="chip">Angular</div>
+          <div class="chip">Azure DevOps</div>
+        </div>
+      </div>
+  
+      <!-- Chapter Organizer & Country Mentor -->
+      <div class="timeline-item">
+        <div class="timeline-date">Dec 2016 – Dec 2020</div>
+        <h3 class="timeline-role">Chapter Organizer &amp; Country Mentor</h3>
+        <div class="timeline-company">Google Developer Group, Nairobi, Kenya</div>
+        <ul class="timeline-details">
+          <li>Activated 7 new &amp; reactivated 4 GDG chapters nationwide.</li>
+          <li>Led 10 Kenyan GDG leads to Google I/O 2017 (50% women).</li>
+          <li>Delivered 20+ talks &amp; code labs, empowering 2000+ developers.</li>
         </ul>
-      </li>
-    </ul>
+        <div class="chips">
+          <div class="chip">Community Leadership</div>
+          <div class="chip">Event Organizing</div>
+          <div class="chip">Public Speaking</div>
+          <div class="chip">Diversity &amp; Inclusion</div>
+        </div>
+      </div>
+  
+      <!-- Software Engineer, Virtual City Ltd -->
+      <div class="timeline-item">
+        <div class="timeline-date">Jul 2016 – Dec 2016</div>
+        <h3 class="timeline-role">Software Engineer</h3>
+        <div class="timeline-company">Virtual City Ltd, Nairobi, Kenya</div>
+        <ul class="timeline-details">
+          <li>Automated data ingestion tools with C#/WPF/SQL, cutting integration time by 85%.</li>
+          <li class="links">
+            Open-sourced 
+            <a href="https://github.com/denpalrius/Material-Message-Box" target="_blank" rel="noopener noreferrer">
+              Material UI WPF Message Box
+            </a>— 20k+ NuGet downloads.
+          </li>
+        </ul>
+        <div class="chips">
+          <div class="chip">C#</div>
+          <div class="chip">WPF</div>
+          <div class="chip">SQL</div>
+          <div class="chip">NuGet</div>
+        </div>
+        <div class="links">
+          <br>
+          <a href="https://github.com/denpalrius/Material-Message-Box" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/stars/denpalrius/Material-Message-Box?style=social"
+                 alt="GitHub stars" />
+          </a>
+          <a href="https://github.com/denpalrius/Material-Message-Box/network/members" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/github/forks/denpalrius/Material-Message-Box?style=social"
+                 alt="GitHub forks" />
+          </a>
+          <a href="https://www.nuget.org/packages/MaterialMessageBox/" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.shields.io/nuget/dt/MaterialMessageBox?label=nuget%20downloads"
+                 alt="NuGet downloads" />
+          </a>
+        </div>
+      </div>
+  
+    </div>
   </section>
+  
 
 
   <section id="blog" class="container">
