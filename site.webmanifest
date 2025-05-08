@@ -1,0 +1,22 @@
+{
+  "name": "Dennis Muticia Portfolio",
+  "short_name": "DM Portfolio",
+  "description": "Dennis Muticia | Software Engineering & AI Leadership Portfolio",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#c1a57b",
+
+  "icons": [
+    {
+      "src": "/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
