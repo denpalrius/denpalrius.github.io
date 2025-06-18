@@ -2,15 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TPF9W2CKY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-2TPF9W2CKY');
-  </script>
-
   <!-- Primary Meta Tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,6 +11,20 @@
   <meta name="keywords" content="Dennis Muticia, Software Engineer, AI Research, Microservices, Reinforcement Learning">
 
   <title>Dennis Muticia - Senior Software Engineer & AI Researcher</title>
+
+
+  <!-- Open Graph & Twitter Cards -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dennis Muticia">
+  <meta property="og:title" content="Dennis Muticia - Senior Software Engineer & AI Researcher">
+  <meta property="og:description"
+    content="Expert in building software at scale, cloud microservices, AI research, reinforcement learning, and federated learning.">
+  <meta property="og:image" content="https://denpalrius.github.io/og-image.jpg">
+  <meta property="og:url" content="https://denpalrius.github.io/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@denpalrius">
 
   <!-- Favicon & PWA -->
   <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
@@ -41,20 +46,29 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TPF9W2CKY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2TPF9W2CKY');
+  </script>
+
   <!-- Google Calendar Scheduling CSS -->
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
 
-  <!-- Open Graph & Twitter Cards -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Dennis Muticia">
-  <meta property="og:title" content="Dennis Muticia - Senior Software Engineer & AI Researcher">
-  <meta property="og:description" content="Expert in building software at scale, cloud microservices, AI research, reinforcement learning, and federated learning.">
-  <meta property="og:image" content="https://denpalrius.github.io/og-image.jpg">
-  <meta property="og:url" content="https://denpalrius.github.io/">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="en_GB">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@denpalrius">
+  <!-- Hotjar Tracking Code for https://denpalrius.github.io -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 6439543, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -79,7 +93,7 @@
     <div class="nav-brand">
       <a href="#landing">DM</a>
     </div>
-  
+
     <div class="nav-links">
       <a href="#landing">Home</a>
       <a href="#skills">Skills</a>
@@ -89,7 +103,7 @@
       <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </div>
-  
+
     <div class="nav-actions">
       <button id="theme-toggle" aria-label="Toggle theme">
         <span class="icon-moon">🌙</span>
@@ -102,12 +116,13 @@
       </button>
     </div>
   </nav>
-  
+
 
 
   <header id="landing" class="landing container">
     <div class="landing-content">
-      <img src="images/prof-pic.jpg" alt="Portrait of Dennis Muticia, Senior Software Engineer & AI Researcher." class="landing-img">
+      <img src="images/prof-pic.jpg" alt="Portrait of Dennis Muticia, Senior Software Engineer & AI Researcher."
+        class="landing-img">
 
       <h1>Dennis Muticia</h1>
       <p class="subtitle">Senior Software Engineer &amp; Technical Lead</p>
@@ -174,20 +189,6 @@
 
   <section id="skills" class="container">
     <h2>Skills</h2>
-    <h3 class="padding-top-small">Team & Leadershp</h3>
-    <div class="chips">
-      <div class="chip">Agile Leadership</div>
-      <div class="chip">Scrum</div>
-      <div class="chip">Kanban</div>
-      <div class="chip">XP</div>
-      <div class="chip">Cross-Team Collaboration</div>
-      <div class="chip">Coaching (GROW model)</div>
-      <div class="chip">Mentorship</div>
-      <div class="chip">Governance, Risk, and Compliance (GRC)</div>
-      <div class="chip">Budget & Resource Allocation</div>
-      <div class="chip">Conflict Resolution & Decision-Making</div>
-      <div class="chip">Event Organizing</div>
-    </div>
     <h3 class="padding-top-small">Software Engineering</h3>
     <div class="chips">
       <div class="chip">Python</div>
@@ -227,6 +228,20 @@
       <div class="chip">AWS SageMaker</div>
       <div class="chip">Vertex AI</div>
       <div class="chip">Federated Learning</div>
+    </div>
+    <h3 class="padding-top-small">Team & Leadershp</h3>
+    <div class="chips">
+      <div class="chip">Agile Leadership</div>
+      <div class="chip">Scrum</div>
+      <div class="chip">Kanban</div>
+      <div class="chip">XP</div>
+      <div class="chip">Cross-Team Collaboration</div>
+      <div class="chip">Coaching (GROW model)</div>
+      <div class="chip">Mentorship</div>
+      <div class="chip">Governance, Risk, and Compliance (GRC)</div>
+      <div class="chip">Budget & Resource Allocation</div>
+      <div class="chip">Conflict Resolution & Decision-Making</div>
+      <div class="chip">Event Organizing</div>
     </div>
   </section>
 
@@ -483,6 +498,17 @@
         <div class="timeline-date">Jan 2024 - May 2025</div>
         <h3 class="timeline-role">Graduate Researcher (Artificial Intelligence)</h3>
         <div class="timeline-company">University of South Dakota</div>
+        <ul class="timeline-details">
+          <li>Built a RAG-based video search engine using LlamaIndex, PAISS embeddings, and Pinecone, boosting
+            contextual query accuracy by 30%</li>
+          <li>Developed a semi-supervised model (98% accuracy) for classifying AI-related skills in imbalanced job
+            postings using TF-IDF, Word2Vec, BERT, and ensemble methods.</li>
+          <li>Designed temporal classifiers (LSTM, GRU, CNNs, Inception V3, VGG16) for action recognition on UCF101
+            using transfer learning.</li>
+          <li>Evaluated Byzantine-robust aggregation strategies (FedAvg, Krum, Trimmed Mean), demonstrating Krum's
+            superior performance for secure distributed training.</li>
+          <li>Implemented Grover's algorithm in Qiskit, demonstrating quantum speedup for unstructured search.</li>
+        </ul>
         <div class="chips">
           <div class="chip">Python</div>
           <div class="chip">PyTorch</div>
@@ -500,7 +526,7 @@
         <div class="timeline-company">Dash Solutions Inc, New York, USA</div>
         <ul class="timeline-details">
           <li>Led Wallet API microservice project on AWS; shipped first iteration in two months.</li>
-          <li>Migrated core Spring Boot API to Redis distributed cache on AWS ElasticCache</li>
+          <li>Migrated core Spring Boot API to Redis distributed cache on AWS ElasticCache.</li>
           <li>Implemented AWS SQS priority queuing for real-time critical alerts.</li>
         </ul>
         <div class="chips">
@@ -542,7 +568,7 @@
         <ul class="timeline-details">
           <li>Orchestrated security-first microservice architecture and payment gateway.</li>
           <li>Scaled from 2 engineers to 7 members across 3 functional teams.</li>
-          <li>Implemented agile across Dev, QA, DevOps &amp; Cybersecurity -> 90–98% sprint delivery.</li>
+          <li>Implemented agile across Dev, QA, DevOps &amp; Cybersecurity, achieving 90–98% sprint delivery.</li>
           <li>Spearheaded GRC strategy &amp; secure banking integrations.</li>
         </ul>
         <div class="chips">
@@ -637,7 +663,9 @@
       <article class="card">
         <img src="images/blog/efficient_frontier.jpeg" alt="Chart & code for RL portfolio optimization">
         <h3>Exploring Reinforcement Learning for Portfolio Optimization</h3>
-        <p>Developed a modular DRL framework for automated portfolio management using FinRL/Stable-Baselines3. Implements multiple policy networks (MLP, EIIE, EI3) across five RL algorithms (A2C, PPO, SAC, DDPG, TD3) for asset allocation optimization on historical market data.</p>
+        <p>Developed a modular DRL framework for automated portfolio management using FinRL/Stable-Baselines3.
+          Implements multiple policy networks (MLP, EIIE, EI3) across five RL algorithms (A2C, PPO, SAC, DDPG, TD3) for
+          asset allocation optimization on historical market data.</p>
         <a href="https://medium.com/@denpalrius/exploring-reinforcement-learning-for-portfolio-optimization-d438181a6772"
           class="read-more" target="_blank" rel="noopener noreferrer">
           Read More
