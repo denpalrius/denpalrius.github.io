@@ -4,6 +4,7 @@
 :root {
   --bg-light: #f9f7f1;
   --text-light: #2a2a2a;
+  --sub-title-text: #6c6c6c;
   --card-light: #ffffff;
   --accent: #c1a57b;
   --project-divider: #e0e0e0;
@@ -12,6 +13,7 @@
 [data-theme="dark"] {
   --bg-light: #1a1a1a;
   --text-light: #eaeaea;
+  --sub-title-text: #b0b0b0;
   --card-light: #2f2e2e;
   --accent: #8b7e66;
   --project-divider: #444444;
@@ -578,7 +580,7 @@ h2 {
 
 #experience .timeline-company {
   font-style: italic;
-  color: #555;
+  color: var(--sub-title-text);
   margin-bottom: 0.75rem;
 }
 
