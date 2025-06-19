@@ -2,19 +2,19 @@
   VARIABLES & THEMES
 ─────────────────────────────────────────────────────────────────────────────*/
 :root {
-  --bg-light:          #f9f7f1;
-  --text-light:        #2a2a2a;
-  --card-light:        #ffffff;
-  --accent:            #c1a57b;
-  --project-divider:   #e0e0e0;
+  --bg-light: #f9f7f1;
+  --text-light: #2a2a2a;
+  --card-light: #ffffff;
+  --accent: #c1a57b;
+  --project-divider: #e0e0e0;
 }
 
 [data-theme="dark"] {
-  --bg-light:          #1a1a1a;
-  --text-light:        #eaeaea;
-  --card-light:        #2f2e2e;
-  --accent:            #8b7e66;
-  --project-divider:   #444444;
+  --bg-light: #1a1a1a;
+  --text-light: #eaeaea;
+  --card-light: #2f2e2e;
+  --accent: #8b7e66;
+  --project-divider: #444444;
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
@@ -29,7 +29,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--bg-light);
   color: var(--text-light);
   line-height: 1.6;
@@ -37,19 +37,20 @@ body {
   padding-top: 70px;
 }
 
-
 /*─────────────────────────────────────────────────────────────────────────────
   NAVBAR
 ─────────────────────────────────────────────────────────────────────────────*/
 .navbar {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: var(--bg-light);
   padding: 0.75rem 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
 
@@ -63,9 +64,9 @@ body {
 
 /* center: links */
 .nav-links {
-  flex: 1;                     /* take all available middle space */
+  flex: 1; /* take all available middle space */
   display: flex;
-  justify-content: center;     /* center them horizontally */
+  justify-content: center; /* center them horizontally */
   gap: 1.25rem;
 }
 
@@ -108,8 +109,12 @@ body {
 #theme-toggle .icon-sun {
   display: none;
 }
-body[data-theme="light"] #theme-toggle .icon-moon { display: inline; }
-body[data-theme="dark"]  #theme-toggle .icon-sun  { display: inline; }
+body[data-theme="light"] #theme-toggle .icon-moon {
+  display: inline;
+}
+body[data-theme="dark"] #theme-toggle .icon-sun {
+  display: inline;
+}
 
 /* hamburger (hidden desktop) */
 .nav-toggle {
@@ -148,13 +153,15 @@ body[data-theme="dark"]  #theme-toggle .icon-sun  { display: inline; }
   /* hide links by default */
   .nav-links {
     position: absolute;
-    top: 100%; left: 0; right: 0;
+    top: 100%;
+    left: 0;
+    right: 0;
     flex-direction: column;
     background: var(--bg-light);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .navbar.open .nav-links {
@@ -169,7 +176,6 @@ body[data-theme="dark"]  #theme-toggle .icon-sun  { display: inline; }
     text-align: left;
   }
 }
-
 
 /*─────────────────────────────────────────────────────────────────────────────
   LAYOUT CONTAINER
@@ -244,7 +250,7 @@ section {
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -258,16 +264,15 @@ section {
   opacity: 0.9;
 }
 
-
 /*─────────────────────────────────────────────────────────────────────────────
   ACTION BUTTONS: RESUME + APPOINTMENT SIDE-BY-SIDE
 ─────────────────────────────────────────────────────────────────────────────*/
 .action-buttons {
   display: flex;
-  align-items: center;       /* vertical center */
-  justify-content: center;   /* horizontal center */
-  gap: 1rem;                 /* space between buttons */
-  flex-wrap: wrap;           /* wrap on narrow screens */
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+  gap: 1rem; /* space between buttons */
+  flex-wrap: wrap; /* wrap on narrow screens */
   margin-bottom: 2rem;
 }
 
@@ -277,7 +282,7 @@ section {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  flex: none;                /* don’t stretch */
+  flex: none; /* don’t stretch */
   margin: 0;
 }
 
@@ -289,9 +294,9 @@ section {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  margin: 0 !important;          /* override any inline margins */
+  margin: 0 !important; /* override any inline margins */
   padding: 0.75rem 1.5rem !important;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.2;
@@ -301,7 +306,7 @@ section {
   border-radius: 8px !important;
   cursor: pointer !important;
   transition: opacity 0.2s !important;
-  min-height: 42px;              /* equalize heights */
+  min-height: 42px; /* equalize heights */
 }
 
 /* Hover state */
@@ -311,7 +316,6 @@ section {
 .action-buttons .appointment-btn button:hover {
   opacity: 0.9 !important;
 }
-
 
 /*─────────────────────────────────────────────────────────────────────────────
   SOCIAL ICONS
@@ -399,7 +403,7 @@ h2 {
   EDUCATION SECTION
 ─────────────────────────────────────────────────────────────────────────────*/
 .education {
-  margin-top: 1.5rem;    /* tighten from default */
+  margin-top: 1.5rem; /* tighten from default */
   margin-bottom: 2rem;
 }
 
@@ -411,17 +415,17 @@ h2 {
 }
 
 .education-item {
-  background:    var(--card-light);
-  border-left:   4px solid var(--accent);
+  background: var(--card-light);
+  border-left: 4px solid var(--accent);
   border-radius: 8px;
-  padding:       1rem 1.25rem;
-  box-shadow:    0 2px 6px rgba(0, 0, 0, 0.05);
-  transition:    transform 0.2s, box-shadow 0.2s;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .education-item:hover {
-  transform:     translateY(-3px);
-  box-shadow:    0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .education-item h3 {
@@ -442,7 +446,6 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
-
 
 /*─────────────────────────────────────────────────────────────────────────────
   PROJECTS GRID & CARDS
@@ -469,7 +472,7 @@ h2 {
 #projects .project-card {
   background: var(--card-light);
   color: var(--text-light);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   padding: 1.5rem;
   display: flex;
@@ -515,7 +518,7 @@ h2 {
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
-  EXPERIENCE TIMELINE (no dots)
+  EXPERIENCE TIMELINE
 ─────────────────────────────────────────────────────────────────────────────*/
 #experience .timeline {
   position: relative;
@@ -527,7 +530,7 @@ h2 {
   content: "";
   position: absolute;
   left: 1rem;
-  top: 0;
+  top: 1.25rem;
   bottom: 0;
   width: 4px;
   background: var(--accent);
@@ -537,6 +540,19 @@ h2 {
 #experience .timeline-item {
   position: relative;
   margin-bottom: 2.5rem;
+}
+
+#experience .timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.85rem;
+  top: 0.25rem;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border: 4px solid var(--bg-light);
+  border-radius: 50%;
+  z-index: 1;
 }
 
 #experience .timeline-item > * {
@@ -551,6 +567,7 @@ h2 {
   font-weight: 600;
   color: var(--accent);
   margin-bottom: 0.25rem;
+  margin-left: auto;
 }
 
 #experience .timeline-role {
@@ -608,7 +625,7 @@ h2 {
   background: var(--card-light);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #blog .card img {
@@ -646,12 +663,9 @@ h2 {
   border: 1px solid var(--project-divider);
   border-radius: 8px;
   padding: 0.75rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
-  transition: 
-    background 0.2s ease, 
-    border-color 0.2s ease, 
-    color 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 #contact-form input::placeholder,
@@ -715,8 +729,10 @@ form button {
 /* success modal */
 .modal {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
@@ -724,7 +740,9 @@ form button {
   z-index: 1000;
 }
 
-.modal.hidden { display: none; }
+.modal.hidden {
+  display: none;
+}
 
 .modal-content {
   background: var(--bg-light);
@@ -733,7 +751,7 @@ form button {
   border-radius: 8px;
   max-width: 320px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .close-btn {
@@ -746,7 +764,6 @@ form button {
   cursor: pointer;
   font-weight: 600;
 }
-
 
 /*─────────────────────────────────────────────────────────────────────────────
   APPOINTMENT BUTTON CONTAINER
@@ -779,7 +796,6 @@ form button {
   margin: 0 !important;
 }
 
-
 /*─────────────────────────────────────────────────────────────────────────────
   APPOINTMENT BUTTON (JS-INJECTED)
 ─────────────────────────────────────────────────────────────────────────────*/
@@ -790,26 +806,23 @@ form button {
 }
 
 .gc-appointment-button {
-  background: var(--accent)        !important;
-  color:      #fff                  !important;
-  font-family: 'Inter', sans-serif !important;
-  font-weight: 600                 !important;
-  font-size:   1rem                !important;
-  padding:     0.75rem 1.5rem      !important;
-  border:      none                !important;
-  border-radius: 8px               !important;
-  cursor:      pointer             !important;
-  box-shadow:  0 2px 4px rgba(0,0,0,0.1) !important;
-  transition:  opacity 0.2s        !important;
-  margin:      0 !important;
+  background: var(--accent) !important;
+  color: #fff !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  padding: 0.75rem 1.5rem !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  transition: opacity 0.2s !important;
+  margin: 0 !important;
 }
 
 .gc-appointment-button:hover {
   opacity: 0.9 !important;
 }
-
-
-
 
 /*─────────────────────────────────────────────────────────────────────────────
   FOOTER & SOCIAL ICONS
@@ -860,4 +873,3 @@ form button {
   font-size: 0.875rem;
   opacity: 0.7;
 }
-
