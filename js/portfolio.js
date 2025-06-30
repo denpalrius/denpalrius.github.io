@@ -128,10 +128,11 @@ document.addEventListener("DOMContentLoaded", () => {
   if (resumeBtn && resumeModal && resumeModalClose) {
     resumeBtn.addEventListener("click", () => {
       resumeModal.classList.remove("hidden");
-      resumeModalClose.focus();
+      document.body.style.overflow = "hidden";
     });
     resumeModalClose.addEventListener("click", () => {
       resumeModal.classList.add("hidden");
+      document.body.style.overflow = "";
       resumeBtn.focus();
     });
   }
