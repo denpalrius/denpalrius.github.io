@@ -370,14 +370,6 @@ section {
   justify-content: center;
 }
 
-.interests .chip {
-  background: var(--accent);
-  color: #fff;
-  padding: 0.4rem 0.9rem;
-  border-radius: 16px;
-  font-size: 0.9rem;
-}
-
 /*─────────────────────────────────────────────────────────────────────────────
   HEADINGS & UTILITIES
 ─────────────────────────────────────────────────────────────────────────────*/
@@ -661,58 +653,6 @@ h2 {
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
-}
-
-/*─────────────────────────────────────────────────────────────────────────────
-  CONTACT FORM: THEMED INPUTS & BUTTON
-─────────────────────────────────────────────────────────────────────────────*/
-#contact-form input,
-#contact-form textarea {
-  width: 100%;
-  background: var(--card-light);
-  color: var(--text-light);
-  border: 1px solid var(--project-divider);
-  border-radius: 8px;
-  padding: 0.75rem;
-  font-family: "Inter", sans-serif;
-  font-size: 1rem;
-  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-}
-
-#contact-form input::placeholder,
-#contact-form textarea::placeholder {
-  color: var(--text-light);
-  opacity: 0.6;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-/* submit button already picks up --accent, but ensure transition */
-#contact-form button {
-  background: var(--accent);
-  color: #fff;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
-    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
-  min-height: 42px;
-  font-size: 1rem;
-}
-
-#contact-form button:hover {
-  transform: scale(1.04);
-  opacity: 0.92;
-}
-
-#contact-form button:active {
-  transform: scale(0.98);
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
@@ -1092,16 +1032,6 @@ button,
   color: #fff !important;
 }
 
-/* Chips: unify style */
-.chip,
-.interests .chip {
-  background: var(--accent);
-  color: #fff;
-  border-radius: 16px;
-  font-size: 0.9rem;
-  padding: 0.3rem 0.8rem;
-}
-
 /* Modal buttons: use .btn and only override where needed */
 .close-btn {
   composes: btn;
@@ -1113,8 +1043,6 @@ button,
 }
 
 /* Remove redundant form button/input rules, keep only context-specific overrides */
-#contact-form input,
-#contact-form textarea,
 form input,
 form textarea {
   width: 100%;
@@ -1127,13 +1055,11 @@ form textarea {
   font-size: 1rem;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
-#contact-form input::placeholder,
-#contact-form textarea::placeholder {
+form input::placeholder,
+form textarea::placeholder {
   color: var(--text-light);
   opacity: 0.6;
 }
-#contact-form input:focus,
-#contact-form textarea:focus,
 form input:focus,
 form textarea:focus {
   outline: none;
@@ -1141,3 +1067,34 @@ form textarea:focus {
 }
 
 /* Document: Use .btn for all main buttons in HTML (resume, send message, appointment, etc.) */
+
+
+/*─────────────────────────────────────────────────────────────────────────────
+  FINAL OVERRIDES & PRINT STYLES
+─────────────────────────────────────────────────────────────────────────────*/
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    padding-top: 0;
+  }
+  .navbar,
+  .footer,
+  .landing-buttons,
+  .social-icons,
+  .appointment-btn-container {
+    display: none;
+  }
+  section {
+    margin-bottom: 1.5rem;
+  }
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}

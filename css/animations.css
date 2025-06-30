@@ -130,22 +130,13 @@
     PROJECT CARDS HOVER EFFECTS
   ─────────────────────────────────────────────────────────────────────────────*/
   
-  .project-card {
-    transition: transform 300ms ease-out,
-                box-shadow 300ms ease-out;
-  }
-  
-  .project-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Also apply to blog cards */
+  .project-card,
   #blog .card {
     transition: transform 300ms ease-out,
                 box-shadow 300ms ease-out;
   }
   
+  .project-card:hover,
   #blog .card:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
