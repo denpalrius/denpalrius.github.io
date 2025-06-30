@@ -16,13 +16,12 @@
   // Routes & custom domain configuration
   "routes": [
     {
-      "pattern": "dennismuticia.dev/*",
-      "zone_name": "dennismuticia.dev",
+      "pattern": "dennismuticia.dev",
       "custom_domain": true
     },
     {
-      "pattern": "www.dennismuticia.dev/*",
-      "zone_name": "dennismuticia.dev"
+      "pattern": "www.dennismuticia.dev",
+      "custom_domain": true
     }
   ]
 }
