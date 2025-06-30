@@ -822,13 +822,18 @@ form button {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem !important;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 42px !important;
+  min-width: 120px !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
-  margin: 0;
+  text-decoration: none;
 }
 
 .gc-appointment-button:hover {
@@ -970,7 +975,7 @@ form button {
   background: var(--accent);
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 8px
   font-weight: 600;
   font-family: "Inter", sans-serif;
   text-decoration: none;
@@ -1040,40 +1045,32 @@ button, .button, .close-btn {
   color: #fff !important;
 }
 
-/* Utility button class for all main buttons */
-.btn {
+/* Utility button class for all main buttons, including injected appointment button */
+.btn, .gc-appointment-button {
   background: var(--accent);
   color: #fff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px !important;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 42px;
+  min-width: 120px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
   text-decoration: none;
 }
-.btn:hover {
+.btn:hover, .gc-appointment-button:hover {
   transform: scale(1.04);
   opacity: 0.92;
 }
-.btn:active {
+.btn:active, .gc-appointment-button:active {
   transform: scale(0.98);
-}
-
-/* Remove redundant button rules and apply .btn class in HTML */
-/* Remove: #resume-btn, .landing-buttons a, .action-buttons .landing-buttons a, .action-buttons .appointment-btn button, #contact-form button, form button, etc. */
-
-/* Harmonize .gc-appointment-button, keep only dark mode !important override */
-.gc-appointment-button {
-  composes: btn;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 0;
 }
 [data-theme="dark"] .gc-appointment-button {
   background: var(--accent) !important;
