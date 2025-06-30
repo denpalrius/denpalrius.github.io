@@ -1,0 +1,276 @@
+/*─────────────────────────────────────────────────────────────────────────────
+  MICRO-ANIMATIONS FOR PROFESSIONAL PORTFOLIO
+─────────────────────────────────────────────────────────────────────────────*/
+
+/*─────────────────────────────────────────────────────────────────────────────
+  KEYFRAMES
+─────────────────────────────────────────────────────────────────────────────*/
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes popScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  HERO PORTRAIT ANIMATION
+─────────────────────────────────────────────────────────────────────────────*/
+
+.landing-img {
+  animation: fadeInUp 800ms ease-out;
+  animation-fill-mode: both;
+}
+
+/* Stagger other hero elements */
+.landing h1 {
+  animation: fadeInUp 800ms ease-out 100ms;
+  animation-fill-mode: both;
+}
+
+.landing .subtitle {
+  animation: fadeInUp 800ms ease-out 200ms;
+  animation-fill-mode: both;
+}
+
+.landing .description {
+  animation: fadeInUp 800ms ease-out 300ms;
+  animation-fill-mode: both;
+}
+
+.action-buttons {
+  animation: fadeInUp 800ms ease-out 400ms;
+  animation-fill-mode: both;
+}
+
+.social-icons {
+  animation: fadeInUp 800ms ease-out 500ms;
+  animation-fill-mode: both;
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  NAVIGATION LINK UNDERLINES
+─────────────────────────────────────────────────────────────────────────────*/
+
+.nav-links a {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 200ms ease-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  SECTION HEADINGS SCROLL ANIMATION
+─────────────────────────────────────────────────────────────────────────────*/
+
+/* Initial state for section headings */
+section h2 {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1),
+              transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Animated state when in view */
+section h2.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  PROJECT CARDS HOVER EFFECTS
+─────────────────────────────────────────────────────────────────────────────*/
+
+.project-card {
+  transition: transform 300ms ease-out,
+              box-shadow 300ms ease-out;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Also apply to blog cards */
+#blog .card {
+  transition: transform 300ms ease-out,
+              box-shadow 300ms ease-out;
+}
+
+#blog .card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Education cards */
+.education-item {
+  transition: transform 300ms ease-out,
+              box-shadow 300ms ease-out;
+}
+
+.education-item:hover {
+  transform: scale(1.03) translateY(-3px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  SOCIAL ICONS AND BUTTONS POP EFFECT
+─────────────────────────────────────────────────────────────────────────────*/
+
+.social-link {
+  transition: transform 150ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-link:hover {
+  animation: popScale 150ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Apply to action buttons */
+.landing-buttons a,
+.appointment-btn,
+.gc-appointment-button,
+#contact-form button,
+.close-btn {
+  transition: transform 150ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.landing-buttons a:hover,
+.appointment-btn:hover,
+.gc-appointment-button:hover,
+#contact-form button:hover,
+.close-btn:hover {
+  animation: popScale 150ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  THEME TOGGLE ROTATION
+─────────────────────────────────────────────────────────────────────────────*/
+
+#theme-toggle {
+  transition: transform 400ms ease-out;
+}
+
+#theme-toggle.rotating {
+  animation: iconRotate 400ms ease-out;
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  SUBTLE CHIP ANIMATIONS
+─────────────────────────────────────────────────────────────────────────────*/
+
+.chip {
+  transition: transform 200ms ease-out,
+              background-color 200ms ease-out;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  TIMELINE ITEM ANIMATIONS
+─────────────────────────────────────────────────────────────────────────────*/
+
+.timeline-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 500ms cubic-bezier(0.19, 1, 0.22, 1),
+              transform 500ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.timeline-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  FORM INPUT FOCUS ANIMATIONS
+─────────────────────────────────────────────────────────────────────────────*/
+
+#contact-form input,
+#contact-form textarea {
+  transition: border-color 200ms ease-out,
+              transform 200ms ease-out,
+              box-shadow 200ms ease-out;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(193, 165, 123, 0.2);
+}
+
+/*─────────────────────────────────────────────────────────────────────────────
+  REDUCED MOTION PREFERENCES
+─────────────────────────────────────────────────────────────────────────────*/
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .landing-img,
+  .landing h1,
+  .landing .subtitle,
+  .landing .description,
+  .action-buttons,
+  .social-icons {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
