@@ -117,4 +117,22 @@ document.addEventListener("DOMContentLoaded", () => {
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
+
+  // ────────────────────────────────────────────────────────────────────────────
+  // RESUME MODAL POPUP
+  // ────────────────────────────────────────────────────────────────────────────
+  const resumeBtn = document.getElementById("resume-btn");
+  const resumeModal = document.getElementById("resume-modal");
+  const resumeModalClose = document.getElementById("resume-modal-close");
+
+  if (resumeBtn && resumeModal && resumeModalClose) {
+    resumeBtn.addEventListener("click", () => {
+      resumeModal.classList.remove("hidden");
+      resumeModalClose.focus();
+    });
+    resumeModalClose.addEventListener("click", () => {
+      resumeModal.classList.add("hidden");
+      resumeBtn.focus();
+    });
+  }
 });
