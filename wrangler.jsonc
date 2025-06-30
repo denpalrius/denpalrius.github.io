@@ -23,5 +23,10 @@
       "pattern": "www.dennismuticia.dev",
       "custom_domain": true
     }
-  ]
+  ],
+  "observability": {
+    "logs": {
+      "enabled": true
+    }
+  }
 }
