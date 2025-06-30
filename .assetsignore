@@ -36,6 +36,7 @@ Thumbs.db
 README.md
 DEPLOYMENT.md
 .wranglerignore
+.assetsignore
 
 # Experimental files (if you don't want to deploy them)
 exp/

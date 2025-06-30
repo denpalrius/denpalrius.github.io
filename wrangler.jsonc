@@ -1,19 +1,27 @@
 {
   "name": "dennis-muticia-portfolio",
-  "main": "_worker.js",
   "compatibility_date": "2024-01-01",
-  "site": {
-    "bucket": "./"
+
+  "assets": {
+    "directory": "./",
+    // Fallback all 404s to index.html (for SPAs)
+    "not_found_handling": "single-page-application"
   },
+
+  // === ENVIRONMENTS ===
   "env": {
     "production": {
+      // Cloudflare Workers service name for prod
       "name": "dennis-muticia-portfolio"
     },
     "staging": {
+      // Cloudflare Workers service name for staging
       "name": "dennis-muticia-portfolio-staging"
     }
   },
-  // Routes & custom domain configuration
+
+  // === ROUTES / CUSTOM DOMAINS ===
+  // Use wildcards to serve all paths under your domains
   "routes": [
     {
       "pattern": "dennismuticia.dev",
@@ -24,6 +32,8 @@
       "custom_domain": true
     }
   ],
+
+  // === OBSERVABILITY ===
   "observability": {
     "logs": {
       "enabled": true
