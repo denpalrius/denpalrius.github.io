@@ -43,7 +43,69 @@ export default {
     const assetPath = path.startsWith('/') ? path.slice(1) : path;
 
     try {
-      // Get the asset from the site bucket
+      // Check if we're in development mode (no ASSETS binding)
+      if (!env.ASSETS) {
+        // For local development, we'll serve a simple HTML response
+        if (path === '/index.html' || path === '/') {
+          return new Response(`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennis Muticia - Development Mode</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .dev-info { background: #f0f8ff; border: 1px solid #0066cc; padding: 20px; border-radius: 8px; }
+        .success { color: #006600; }
+        .warning { color: #cc6600; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Development Mode Active</h1>
+    <div class="dev-info">
+        <h2 class="success">✅ Worker is running successfully!</h2>
+        <p>Your Cloudflare Worker is working correctly in development mode.</p>
+        <p><strong>Next steps:</strong></p>
+        <ul>
+            <li>Run <code>npm run deploy</code> to deploy to production</li>
+            <li>Your site will be available at <strong>https://dennismuticia.dev</strong></li>
+            <li>All static assets will be served properly in production</li>
+        </ul>
+        <p class="warning"><strong>Note:</strong> Static assets are not available in local development mode. Deploy to test the full website functionality.</p>
+    </div>
+    <p><a href="https://dennismuticia.dev" target="_blank">View Production Site →</a></p>
+</body>
+</html>`, {
+            status: 200,
+            headers: {
+              'Content-Type': 'text/html',
+              'Cache-Control': 'no-cache'
+            }
+          });
+        }
+        
+        // For other paths in development, return a helpful message
+        return new Response(`
+<!DOCTYPE html>
+<html>
+<head><title>Development Mode</title></head>
+<body>
+    <h1>Development Mode</h1>
+    <p>Path: ${path}</p>
+    <p>This asset would be served in production. Deploy to test full functionality.</p>
+    <p><a href="/">← Back to Home</a></p>
+</body>
+</html>`, {
+          status: 404,
+          headers: {
+            'Content-Type': 'text/html',
+            'Cache-Control': 'no-cache'
+          }
+        });
+      }
+
+      // Production mode - get the asset from the site bucket
       const asset = await env.ASSETS.fetch(new Request(url, request));
       
       if (asset.status === 404) {
