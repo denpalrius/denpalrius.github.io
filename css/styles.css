@@ -340,7 +340,7 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .social-link svg {
@@ -351,6 +351,8 @@ section {
 .social-link:hover {
   background: var(--accent);
   color: var(--bg-light);
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
@@ -867,7 +869,7 @@ form button {
   background: var(--card-light);
   color: var(--accent);
   border-radius: 50%;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s, color 0.2s, transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .social-link svg {
@@ -878,6 +880,8 @@ form button {
 .social-link:hover {
   background: var(--accent);
   color: var(--bg-light);
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
 .footer-credit {
