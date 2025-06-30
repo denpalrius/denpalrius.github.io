@@ -258,12 +258,13 @@ section {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .landing-buttons a:hover,
 .landing-buttons .appointment-btn:hover {
-  opacity: 0.9;
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
@@ -284,7 +285,7 @@ section {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  flex: none; /* don’t stretch */
+  flex: none; /* don't stretch */
   margin: 0;
 }
 
@@ -307,7 +308,7 @@ section {
   border: none !important;
   border-radius: 8px !important;
   cursor: pointer !important;
-  transition: opacity 0.2s !important;
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
   min-height: 42px; /* equalize heights */
 }
 
@@ -316,7 +317,8 @@ section {
 .action-buttons .appointment-btn gc-scheduling-button:hover,
 .action-buttons .appointment-btn .gc-appointment-button:hover,
 .action-buttons .appointment-btn button:hover {
-  opacity: 0.9 !important;
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
@@ -691,12 +693,12 @@ h2 {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s ease, transform 0.1s ease;
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 #contact-form button:hover {
-  background: var(--accent);
-  opacity: 0.9;
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
 #contact-form button:active {
@@ -765,6 +767,12 @@ form button {
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.close-btn:hover {
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
@@ -818,12 +826,13 @@ form button {
   border-radius: 8px !important;
   cursor: pointer !important;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
-  transition: opacity 0.2s !important;
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
   margin: 0 !important;
 }
 
 .gc-appointment-button:hover {
-  opacity: 0.9 !important;
+  transform: scale(1.04);
+  opacity: 0.92;
 }
 
 /*─────────────────────────────────────────────────────────────────────────────

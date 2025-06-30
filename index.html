@@ -44,8 +44,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
 
   <!-- Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2TPF9W2CKY"></script>
@@ -140,11 +140,7 @@
 
       <div class="action-buttons ">
         <div class="landing-buttons">
-          <a id="resume-btn"
-            href="https://docs.google.com/document/d/1vje4uUo0iAIVX078PtjJisdFlYgHvaLjUhY0IVs8XoA/edit?usp=sharing"
-            target="_blank" rel="noopener noreferrer" download>
-            Resume
-          </a>
+          <button id="resume-btn" type="button">Resume</button>
         </div>
 
         <div class="appointment-btn"
@@ -775,10 +771,29 @@
     </div>
   </footer>
 
-  <script src="script.js" defer></script>
-  <script src="animations.js" defer></script>
+  <script src="js/portfolio.js" defer></script>
+  <script src="js/animations.js" defer></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script defer src="https://calendar.google.com/calendar/scheduling-button-script.js"></script>
+
+  <!-- Resume Modal Popup -->
+  <div id="resume-modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content resume-modal-content">
+      <div class="resume-modal-header-simple">
+        <span class="resume-modal-title">Dennis Muticia Resume</span>
+        <button id="resume-modal-close" class="resume-modal-close-simple" type="button" aria-label="Close">&times;</button>
+      </div>
+      <iframe src="https://docs.google.com/document/d/1vje4uUo0iAIVX078PtjJisdFlYgHvaLjUhY0IVs8XoA/preview" class="resume-iframe"></iframe>
+      <a href="https://docs.google.com/document/d/1vje4uUo0iAIVX078PtjJisdFlYgHvaLjUhY0IVs8XoA/export?format=pdf" target="_blank" rel="noopener noreferrer" class="close-btn" style="margin-top: 1rem; text-align: center; display: inline-block;">
+        <span aria-hidden="true" style="display:inline-flex;align-items:center;margin-right:0.5em;vertical-align:middle;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+            <path d="M10 2v10m0 0l-4-4m4 4l4-4M4 16h12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        Download PDF
+      </a>
+    </div>
+  </div>
 
 </body>
 

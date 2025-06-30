@@ -4,7 +4,7 @@ A responsive, theme-aware personal static portfolio website showcasing my projec
 
 ## Live Site
 
-The website is live and accessible at [https://denpalrius.github.io](https://denpalrius.github.io)
+The website is live and accessible at [https://dennismuticia.dev](https://dennismuticia.dev)
 
 ## Features
 
@@ -48,9 +48,16 @@ The website is live and accessible at [https://denpalrius.github.io](https://den
 
 ```
 ├── index.html        # Main HTML page
-├── styles.css        # Core CSS with theme variables
-├── script.js         # JavaScript for theme toggle, form, and scheduling buttons
+├── css/
+│   ├── styles.css        # Core CSS with theme variables
+│   └── animations.css    # CSS for animations
+├── js/
+│   ├── portfolio.js      # Main JavaScript for site logic
+│   └── animations.js     # JavaScript for animations
 ├── images/           # Profile picture, project & blog images
+├── robots.txt        # Search engine crawling rules
+├── sitemap.xml       # Sitemap for search engines
+├── site.webmanifest  # PWA manifest for web app
 └── README.md         # Project overview and setup instructions
 ```
 
