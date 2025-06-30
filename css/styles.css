@@ -251,7 +251,7 @@ section {
   background: var(--accent);
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 8px !important;
   font-weight: 600;
   font-family: "Inter", sans-serif;
   text-decoration: none;
@@ -259,7 +259,8 @@ section {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .landing-buttons a:hover,
@@ -309,7 +310,8 @@ section {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
   min-height: 42px;
 }
 
@@ -341,7 +343,9 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s, color 0.2s, transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: background 0.2s, color 0.2s,
+    transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .social-link svg {
@@ -696,7 +700,8 @@ h2 {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
   min-height: 42px;
   font-size: 1rem;
 }
@@ -772,7 +777,8 @@ form button {
   border-radius: 4px;
   cursor: pointer;
   font-weight: 600;
-  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .close-btn:hover {
@@ -824,7 +830,7 @@ form button {
   font-size: 1rem;
   padding: 0.75rem 1.5rem !important;
   border: none;
-  border-radius: 8px;
+  border-radius: 8px !important;
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 42px !important;
@@ -832,7 +838,8 @@ form button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
   text-decoration: none;
 }
 
@@ -873,7 +880,9 @@ form button {
   background: var(--card-light);
   color: var(--accent);
   border-radius: 50%;
-  transition: background 0.2s, color 0.2s, transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: background 0.2s, color 0.2s,
+    transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .social-link svg {
@@ -914,7 +923,7 @@ form button {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   min-height: 3.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 0.5rem;
 }
 .resume-iframe {
@@ -939,7 +948,7 @@ form button {
   color: #fff;
   border: none;
   border-radius: 2rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.28), 0 2px 12px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.28), 0 2px 12px rgba(0, 0, 0, 0.18);
   cursor: pointer;
   font-weight: 700;
   font-size: 1.25rem;
@@ -962,11 +971,12 @@ form button {
   font-weight: 700;
   letter-spacing: 0.01em;
 }
-.modal-close-btn:hover, .modal-close-btn:focus {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   background: #fff;
   color: #222;
   transform: scale(1.04);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
 }
 .resume-modal-content .close-btn {
   text-decoration: none;
@@ -975,7 +985,7 @@ form button {
   background: var(--accent);
   color: #fff;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px
+  border-radius: 8px;
   font-weight: 600;
   font-family: "Inter", sans-serif;
   text-decoration: none;
@@ -983,7 +993,8 @@ form button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
   min-height: 42px;
   border: none;
   font-size: 1rem;
@@ -1024,14 +1035,17 @@ form button {
   border-radius: 4px;
   transition: color 0.2s, transform 0.2s;
 }
-.resume-modal-close-simple:hover, .resume-modal-close-simple:focus {
+.resume-modal-close-simple:hover,
+.resume-modal-close-simple:focus {
   background: none;
   color: var(--accent);
   outline: none;
   transform: scale(1.2);
 }
 
-button, .button, .close-btn {
+button,
+.button,
+.close-btn {
   color: #fff;
 }
 
@@ -1046,7 +1060,7 @@ button, .button, .close-btn {
 }
 
 /* Utility button class for all main buttons, including injected appointment button */
-.btn, .gc-appointment-button {
+.btn {
   background: var(--accent);
   color: #fff;
   font-family: "Inter", sans-serif;
@@ -1062,23 +1076,25 @@ button, .button, .close-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1),
+    opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
   text-decoration: none;
 }
-.btn:hover, .gc-appointment-button:hover {
+.btn:hover {
   transform: scale(1.04);
   opacity: 0.92;
 }
-.btn:active, .gc-appointment-button:active {
+.btn:active {
   transform: scale(0.98);
 }
-[data-theme="dark"] .gc-appointment-button {
+[data-theme="dark"] .btn.gc-appointment-button {
   background: var(--accent) !important;
   color: #fff !important;
 }
 
 /* Chips: unify style */
-.chip, .interests .chip {
+.chip,
+.interests .chip {
   background: var(--accent);
   color: #fff;
   border-radius: 16px;
