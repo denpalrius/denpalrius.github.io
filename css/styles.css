@@ -101,6 +101,7 @@ body {
   justify-content: center;
   padding: 0.25rem;
   transition: color 0.2s;
+  cursor: pointer;
 }
 #theme-toggle:hover {
   color: var(--accent);
@@ -282,10 +283,10 @@ section {
 /* Ensure each child (the landing-buttons wrapper & the appointment-btn) shrinks to fit */
 .action-buttons > .landing-buttons,
 .action-buttons > .appointment-btn {
-  display: inline-flex !important;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: none; /* don't stretch */
+  flex: none;
   margin: 0;
 }
 
@@ -294,22 +295,22 @@ section {
 .action-buttons .appointment-btn gc-scheduling-button,
 .action-buttons .appointment-btn .gc-appointment-button,
 .action-buttons .appointment-btn button {
-  display: inline-flex !important;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 !important; /* override any inline margins */
-  padding: 0.75rem 1.5rem !important;
+  margin: 0;
+  padding: 0.75rem 1.5rem;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.2;
-  background: var(--accent) !important;
-  color: #fff !important;
-  border: none !important;
-  border-radius: 8px !important;
-  cursor: pointer !important;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
-  min-height: 42px; /* equalize heights */
+  min-height: 42px;
 }
 
 /* Hover state */
@@ -696,6 +697,8 @@ h2 {
   font-weight: 600;
   cursor: pointer;
   transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  min-height: 42px;
+  font-size: 1rem;
 }
 
 #contact-form button:hover {
@@ -781,12 +784,10 @@ form button {
   APPOINTMENT BUTTON CONTAINER
 ─────────────────────────────────────────────────────────────────────────────*/
 .appointment-btn-container {
-  /* no background or forced width */
-  background: transparent !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  margin-top: clamp(16px, 4%, 24px) !important;
-  /* center content horizontally */
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  margin-top: clamp(16px, 4%, 24px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -794,42 +795,40 @@ form button {
 }
 
 .appointment-btn-container p {
-  /* reset margins and inherit text styling */
   margin: 0;
   color: var(--text-light);
   font-size: 1rem;
-  text-align: center; /* center text */
+  text-align: center;
 }
 
 .appointment-btn-container .appointment-btn {
-  /* let the widget size itself */
-  display: inline-flex !important;
-  width: auto !important;
-  margin: 0 !important;
+  display: inline-flex;
+  width: auto;
+  margin: 0;
 }
 
 /*─────────────────────────────────────────────────────────────────────────────
   APPOINTMENT BUTTON (JS-INJECTED)
 ─────────────────────────────────────────────────────────────────────────────*/
 .appointment-btn {
-  display: inline-flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gc-appointment-button {
   background: var(--accent) !important;
   color: #fff !important;
-  font-family: "Inter", sans-serif !important;
-  font-weight: 600 !important;
-  font-size: 1rem !important;
-  padding: 0.75rem 1.5rem !important;
-  border: none !important;
-  border-radius: 8px !important;
-  cursor: pointer !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
-  margin: 0 !important;
+  margin: 0;
 }
 
 .gc-appointment-button:hover {
@@ -888,3 +887,244 @@ form button {
   font-size: 0.875rem;
   opacity: 0.7;
 }
+
+/* Resume Modal Custom Styles */
+.resume-modal-content {
+  max-width: 1100px;
+  width: 100vw;
+  height: 90vh;
+  padding: 1rem 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  margin-top: 2.5rem;
+}
+.resume-modal-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #222;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  min-height: 3.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin-bottom: 0.5rem;
+}
+.resume-iframe {
+  flex: 1 1 auto;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  min-height: 500px;
+  margin-bottom: 1rem;
+}
+.modal-close-btn {
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.28), 0 2px 12px rgba(0,0,0,0.18);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  padding: 0.5rem 2.2rem 0.5rem 1.5rem;
+  z-index: 2000;
+  min-width: 8.5rem;
+  min-height: 3.5rem;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  outline: none;
+}
+.modal-close-btn .close-icon {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.modal-close-btn .close-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.modal-close-btn:hover, .modal-close-btn:focus {
+  background: #fff;
+  color: #222;
+  transform: scale(1.04);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+}
+.resume-modal-content .close-btn {
+  text-decoration: none;
+}
+#resume-btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  min-height: 42px;
+  border: none;
+  font-size: 1rem;
+}
+#resume-btn:hover {
+  transform: scale(1.04);
+  opacity: 0.92;
+}
+
+.resume-modal-header-simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-light);
+  color: var(--text-light);
+  padding: 0.5rem 1.5rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  min-height: 3.5rem;
+  box-shadow: none;
+  border-bottom: none;
+  margin-bottom: 0.5rem;
+}
+.resume-modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.resume-modal-close-simple {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color 0.2s, transform 0.2s;
+}
+.resume-modal-close-simple:hover, .resume-modal-close-simple:focus {
+  background: none;
+  color: var(--accent);
+  outline: none;
+  transform: scale(1.2);
+}
+
+button, .button, .close-btn {
+  color: #fff;
+}
+
+.resume-modal-content .close-btn:hover {
+  transform: scale(1.02);
+  opacity: 0.92;
+}
+
+[data-theme="dark"] .gc-appointment-button {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+/* Utility button class for all main buttons */
+.btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 200ms cubic-bezier(0.19, 1, 0.22, 1), opacity 200ms cubic-bezier(0.19, 1, 0.22, 1);
+  text-decoration: none;
+}
+.btn:hover {
+  transform: scale(1.04);
+  opacity: 0.92;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Remove redundant button rules and apply .btn class in HTML */
+/* Remove: #resume-btn, .landing-buttons a, .action-buttons .landing-buttons a, .action-buttons .appointment-btn button, #contact-form button, form button, etc. */
+
+/* Harmonize .gc-appointment-button, keep only dark mode !important override */
+.gc-appointment-button {
+  composes: btn;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+[data-theme="dark"] .gc-appointment-button {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+/* Chips: unify style */
+.chip, .interests .chip {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  padding: 0.3rem 0.8rem;
+}
+
+/* Modal buttons: use .btn and only override where needed */
+.close-btn {
+  composes: btn;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+}
+.resume-modal-content .close-btn {
+  text-decoration: none;
+}
+
+/* Remove redundant form button/input rules, keep only context-specific overrides */
+#contact-form input,
+#contact-form textarea,
+form input,
+form textarea {
+  width: 100%;
+  background: var(--card-light);
+  color: var(--text-light);
+  border: 1px solid var(--project-divider);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+  color: var(--text-light);
+  opacity: 0.6;
+}
+#contact-form input:focus,
+#contact-form textarea:focus,
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Document: Use .btn for all main buttons in HTML (resume, send message, appointment, etc.) */
