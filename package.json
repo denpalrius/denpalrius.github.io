@@ -11,7 +11,7 @@
     "deploy:production": "wrangler deploy --env production"
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.22.0"
   },
   "keywords": [
     "dennis-muticia",
