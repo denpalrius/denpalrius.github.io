@@ -1,0 +1,28 @@
+{
+  "name": "dennis-muticia-portfolio",
+  "main": "_worker.js",
+  "compatibility_date": "2024-01-01",
+  "site": {
+    "bucket": "./"
+  },
+  "env": {
+    "production": {
+      "name": "dennis-muticia-portfolio"
+    },
+    "staging": {
+      "name": "dennis-muticia-portfolio-staging"
+    }
+  },
+  // Routes & custom domain configuration
+  "routes": [
+    {
+      "pattern": "dennismuticia.dev/*",
+      "zone_name": "dennismuticia.dev",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.dennismuticia.dev/*",
+      "zone_name": "dennismuticia.dev"
+    }
+  ]
+}
