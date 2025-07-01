@@ -907,6 +907,11 @@ form textarea:focus {
   border-color: var(--accent);
 }
 
+#contact-form .btn {
+  width: 95%;
+  margin: 0 auto;
+}
+
 /* Document: Use .btn for all main buttons in HTML (resume, send message, appointment, etc.) */
 
 /*─────────────────────────────────────────────────────────────────────────────
